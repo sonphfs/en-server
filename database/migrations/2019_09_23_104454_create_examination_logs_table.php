@@ -14,7 +14,10 @@ class CreateExaminationLogsTable extends Migration
     public function up()
     {
         Schema::create('examination_logs', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('examination_id');
+            $table->integer('total_score');
             $table->timestamps();
         });
     }

@@ -14,8 +14,8 @@ class CreateLoginHistoriesTable extends Migration
     public function up()
     {
         Schema::create('login_histories', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
+            $table->increments('id');
+            $table->unsignedInteger('user_id');
             $table->string('ip_address');
             $table->string('device');
             $table->timestamps();

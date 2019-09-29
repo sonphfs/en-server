@@ -14,12 +14,14 @@ class CreateLearningWordsTable extends Migration
     public function up()
     {
         Schema::create('learning_words', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('subject_id');
-            $table->string('content');
+            $table->increments('id');
+            $table->unsignedInteger('subject_id');
+            $table->string('word');
             $table->string('type');
-            $table->string('audio');
+            $table->string('meaning');
             $table->string('pronunciation');
+            $table->string('audio');
+            $table->string('image');
             $table->string('example');
             $table->timestamps();
         });

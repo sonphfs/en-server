@@ -14,7 +14,10 @@ class CreateQuestionLogsTable extends Migration
     public function up()
     {
         Schema::create('question_logs', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->unsignedInteger('examination_log_id');
+            $table->unsignedInteger('question_id');
+            $table->string('choosen_answer');
             $table->timestamps();
         });
     }
