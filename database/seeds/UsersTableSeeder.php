@@ -14,6 +14,14 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        $users = User::all();
+        if(!count($users)) {
+            $this->_createDataSeed();
+        }
+    }
+
+    private function _createDataSeed()
+    {
         $jsonData = json_decode(Storage::get('data\users.json'));
         foreach ($jsonData as $item) {
             $user = new User();
