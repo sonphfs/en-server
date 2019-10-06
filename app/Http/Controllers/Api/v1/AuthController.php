@@ -35,6 +35,9 @@ class AuthController extends Controller
                 'msg' => 'Invalid Credentials.'
             ], Response::HTTP_BAD_REQUEST);
         }
+        $user = Auth::user();
+        event(new \App\Events\Login($user));
+
         return response()->json(['token' => $token], Response::HTTP_OK);
     }
 
