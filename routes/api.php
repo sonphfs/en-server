@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::prefix('v1')->group(function() {
+Route::prefix('v1')->middleware(['cors'])->group(function() {
     Route::namespace('Api\v1')->group(function (){
         Route::get('check', function (){
             return '{"status" : "OK!"}';
