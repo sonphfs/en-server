@@ -18,6 +18,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         Route::get('check', function (){
             return '{"status" : "OK!"}';
         });
+        Route::get('get-exam', 'ExaminationController@getExam');
         Route::post('signup', 'AuthController@register');
         Route::post('login', 'AuthController@login');
         Route::group(['middleware' => 'jwt.auth'], function () {
