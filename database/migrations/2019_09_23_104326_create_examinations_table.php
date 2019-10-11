@@ -20,7 +20,7 @@ class CreateExaminationsTable extends Migration
             $table->string('type');
             $table->string('description');
             $table->string('audio');
-            $table->string('user_id');
+            $table->string('user_id')->nullable(true);
             $table->timestamps();
         });
     }
