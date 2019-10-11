@@ -140,13 +140,6 @@
             },
             {
                 "part": 2,
-                "no": 12,
-                "content": "",
-                "image": "image_link",
-                "data": " {\"A\": \"She's searching in her handbag.\",\n\"B\": \"She's searching in her handbag.\",\n\"C\": \"She's paying for a purchase.\",\n\"D\": \"She's holding some flowers.\",\n\"correct_answer\": \"A\"\n}"
-            },
-            {
-                "part": 2,
                 "no": 20,
                 "content": "",
                 "image": "image_link",
@@ -169,13 +162,6 @@
             {
                 "part": 2,
                 "no": 23,
-                "content": "",
-                "image": "image_link",
-                "data": " {\"A\": \"She's searching in her handbag.\",\n\"B\": \"She's searching in her handbag.\",\n\"C\": \"She's paying for a purchase.\",\n\"D\": \"She's holding some flowers.\",\n\"correct_answer\": \"A\"\n}"
-            },
-            {
-                "part": 2,
-                "no": 12,
                 "content": "",
                 "image": "image_link",
                 "data": " {\"A\": \"She's searching in her handbag.\",\n\"B\": \"She's searching in her handbag.\",\n\"C\": \"She's paying for a purchase.\",\n\"D\": \"She's holding some flowers.\",\n\"correct_answer\": \"A\"\n}"
@@ -225,13 +211,6 @@
             {
                 "part": 2,
                 "no": 30,
-                "content": "",
-                "image": "image_link",
-                "data": " {\"A\": \"She's searching in her handbag.\",\n\"B\": \"She's searching in her handbag.\",\n\"C\": \"She's paying for a purchase.\",\n\"D\": \"She's holding some flowers.\",\n\"correct_answer\": \"A\"\n}"
-            },
-            {
-                "part": 2,
-                "no": 12,
                 "content": "",
                 "image": "image_link",
                 "data": " {\"A\": \"She's searching in her handbag.\",\n\"B\": \"She's searching in her handbag.\",\n\"C\": \"She's paying for a purchase.\",\n\"D\": \"She's holding some flowers.\",\n\"correct_answer\": \"A\"\n}"
@@ -337,13 +316,6 @@
             {
                 "part": 3,
                 "no": 45,
-                "content": "",
-                "image": "image_link",
-                "data": " {\"A\": \"She's searching in her handbag.\",\n\"B\": \"She's searching in her handbag.\",\n\"C\": \"She's paying for a purchase.\",\n\"D\": \"She's holding some flowers.\",\n\"correct_answer\": \"A\"\n}"
-            },
-            {
-                "part": 3,
-                "no": 41,
                 "content": "",
                 "image": "image_link",
                 "data": " {\"A\": \"She's searching in her handbag.\",\n\"B\": \"She's searching in her handbag.\",\n\"C\": \"She's paying for a purchase.\",\n\"D\": \"She's holding some flowers.\",\n\"correct_answer\": \"A\"\n}"
@@ -889,21 +861,7 @@
             },
             {
                 "part": 5,
-                "no": 100,
-                "content": "Ms. Durkin asked for volunteers to help _____ with the employee fitness program.",
-                "image": "image_link",
-                "data": " {\"A\": \"she\",\n\"B\": \"her\",\n\"C\": \" hers\",\n\"D\": \"herself\",\n\"correct_answer\": \"B\"\n}"
-            },
-            {
-                "part": 5,
                 "no": 123,
-                "content": "Ms. Durkin asked for volunteers to help _____ with the employee fitness program.",
-                "image": "image_link",
-                "data": " {\"A\": \"she\",\n\"B\": \"her\",\n\"C\": \" hers\",\n\"D\": \"herself\",\n\"correct_answer\": \"B\"\n}"
-            },
-            {
-                "part": 5,
-                "no": 100,
                 "content": "Ms. Durkin asked for volunteers to help _____ with the employee fitness program.",
                 "image": "image_link",
                 "data": " {\"A\": \"she\",\n\"B\": \"her\",\n\"C\": \" hers\",\n\"D\": \"herself\",\n\"correct_answer\": \"B\"\n}"
@@ -946,13 +904,6 @@
             {
                 "part": 5,
                 "no": 129,
-                "content": "Ms. Durkin asked for volunteers to help _____ with the employee fitness program.",
-                "image": "image_link",
-                "data": " {\"A\": \"she\",\n\"B\": \"her\",\n\"C\": \" hers\",\n\"D\": \"herself\",\n\"correct_answer\": \"B\"\n}"
-            },
-            {
-                "part": 5,
-                "no": 100,
                 "content": "Ms. Durkin asked for volunteers to help _____ with the employee fitness program.",
                 "image": "image_link",
                 "data": " {\"A\": \"she\",\n\"B\": \"her\",\n\"C\": \" hers\",\n\"D\": \"herself\",\n\"correct_answer\": \"B\"\n}"
@@ -1094,13 +1045,6 @@
                 "part": 6,
                 "no": 149,
                 "content": "(149)",
-                "image": "image_link",
-                "data": " {\"A\": \"cost\",\n\"B\": \"delay\",\n\"C\": \" decision\",\n\"D\": \"forecast\",\n\"correct_answer\": \"B\"\n}"
-            },
-            {
-                "part": 6,
-                "no": 141,
-                "content": "(141)",
                 "image": "image_link",
                 "data": " {\"A\": \"cost\",\n\"B\": \"delay\",\n\"C\": \" decision\",\n\"D\": \"forecast\",\n\"correct_answer\": \"B\"\n}"
             },
