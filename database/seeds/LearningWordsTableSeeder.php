@@ -12,6 +12,14 @@ class LearningWordsTableSeeder extends Seeder
      */
     public function run()
     {
+        $words = Word::all();
+        if(!count($words)) {
+            $this->_createDataSeed();
+        }
+    }
+
+    private function _createDataSeed()
+    {
         $jsonData = json_decode(Storage::get('data/learning_words.json'));
         foreach ($jsonData as $key => $item) {
             $word = new Word();
