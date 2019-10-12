@@ -15,16 +15,20 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('subject_id')->nullable(true);
-            $table->unsignedInteger('lesson_id')->nullable(true);
+            $table->integer('parent_id');
             $table->string('code');
             $table->integer('part')->nullable(true);
             $table->integer('no')->nullable(true);
             $table->string('paragraph')->nullable(true);
-            $table->string('content');
+            $table->string('content')->nullable(true);
             $table->string('image')->nullable(true);
-            $table->string('audio')->nullable(true);
-            $table->string('data', 2048);
+            $table->string('answer_A')->nullable(true);
+            $table->string('answer_B')->nullable(true);
+            $table->string('answer_C')->nullable(true);
+            $table->string('answer_D')->nullable(true);
+            $table->string('correct_answer');
+            $table->unsignedInteger('subject_id')->nullable(true);
+            $table->unsignedInteger('lesson_id')->nullable(true);
             $table->timestamps();
         });
     }
