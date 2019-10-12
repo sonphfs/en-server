@@ -11,10 +11,15 @@ class ContactController extends Controller
 {
     public function send(ContactRequest $request)
     {
+        $requestData = $request->only(['first_name', 'last_name', 'subject', 'email', 'body']);
         $contact = new Contact();
-        $contact->fill($request->data);
+        $contact->first_name = $requestData['first_name'];
+        $contact->last_name = $requestData['last_name'];
+        $contact->body = $requestData['body'];
+        $contact->subject = $requestData['subject'];
+        $contact->email = $requestData['email'];
+        $contact->flag = 1;
         $contact->save();
-
         return response()->json([$contact]);
     }
 }
