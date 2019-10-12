@@ -33,11 +33,19 @@ class ExaminationTableSeeder extends Seeder
             foreach ($item->questions as $question) {
                 $newQuestion = new Question();
                 $newQuestion->part = $question->part;
+                $newQuestion->parent_id = $question->parent_id;
                 $newQuestion->code = $this->_generateRandomString(8);
                 $newQuestion->no = $question->no;
                 $newQuestion->content = $question->content;
+                if(isset($question->paragraph)) {
+                    $newQuestion->paragraph = $question->paragraph;
+                }
                 $newQuestion->image = $question->image;
-                $newQuestion->data = $question->data;
+                $newQuestion->answer_A = $question->answer_A;
+                $newQuestion->answer_B = $question->answer_B;
+                $newQuestion->answer_C = $question->answer_C;
+                $newQuestion->answer_D = $question->answer_D;
+                $newQuestion->correct_answer = $question->correct_answer;
                 $newQuestion->save();
                 $examinationQuestion = new ExaminationQuestion();
                 $examinationQuestion->examination_id = $exam->id;

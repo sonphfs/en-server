@@ -19,7 +19,7 @@ class CreateQuestionsTable extends Migration
             $table->string('code');
             $table->integer('part')->nullable(true);
             $table->integer('no')->nullable(true);
-            $table->string('paragraph')->nullable(true);
+            $table->string('paragraph',4096)->nullable(true);
             $table->string('content')->nullable(true);
             $table->string('image')->nullable(true);
             $table->string('answer_A')->nullable(true);
