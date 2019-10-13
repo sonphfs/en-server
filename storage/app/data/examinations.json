@@ -15,7 +15,7 @@
                 "answer_B": "The man is holding some packages.",
                 "answer_C": "The man is loading a cart.",
                 "answer_D": "The man is standing near some boxes.",
-                "correct_answer": "C"
+                "correct_answer": "A"
             },
             {
                 "part": 2,
@@ -39,7 +39,7 @@
                 "answer_B": "Three years ago.",
                 "answer_C": "The Strauss Company.",
                 "answer_D": "",
-                "correct_answer": "B"
+                "correct_answer": "A"
             },
             {
                 "part": 2,
@@ -51,7 +51,7 @@
                 "answer_B": "At the Lakeside Hotel.",
                 "answer_C": "For a conference.",
                 "answer_D": "",
-                "correct_answer": "B"
+                "correct_answer": "A"
             },
             {
                 "part": 3,
@@ -63,7 +63,7 @@
                 "answer_B": "At a hotel",
                 "answer_C": "At a travel agency",
                 "answer_D": "At an airport",
-                "correct_answer": "B"
+                "correct_answer": "A"
             },
             {
                 "part": 3,
@@ -75,7 +75,7 @@
                 "answer_B": "Make a reservation",
                 "answer_C": "Arrange transportation",
                 "answer_D": "Print out a receipt",
-                "correct_answer": "D"
+                "correct_answer": "A"
             },
             {
                 "part": 3,
@@ -99,7 +99,7 @@
                 "answer_B": "A bicycle",
                 "answer_C": "A tool kit",
                 "answer_D": "An airline ticket",
-                "correct_answer": "D"
+                "correct_answer": "A"
             },
             {
                 "part": 4,
@@ -111,7 +111,7 @@
                 "answer_B": "A discount",
                 "answer_C": "An application",
                 "answer_D": "A price list",
-                "correct_answer": "B"
+                "correct_answer": "A"
             },
             {
                 "part": 4,
@@ -135,7 +135,7 @@
                 "answer_B": "",
                 "answer_C": "",
                 "answer_D": "",
-                "correct_answer": ""
+                "correct_answer": "B"
             },
             {
                 "part": 5,
@@ -159,7 +159,7 @@
                 "answer_B": "among",
                 "answer_C": "by",
                 "answer_D": "from",
-                "correct_answer": "C"
+                "correct_answer": "B"
             },
             {
                 "part": 5,
@@ -196,7 +196,7 @@
                 "answer_B": "in that",
                 "answer_C": "due to",
                 "answer_D": "provided that",
-                "correct_answer": "A"
+                "correct_answer": "B"
             },
             {
                 "part": 6,
@@ -208,7 +208,7 @@
                 "answer_B": "increase",
                 "answer_C": "agenda",
                 "answer_D": "termination",
-                "correct_answer": "D"
+                "correct_answer": "B"
             },{
                 "part": 6,
                 "parent_id": 15,
@@ -219,7 +219,7 @@
                 "answer_B": "offering",
                 "answer_C": "being offered",
                 "answer_D": "have offered",
-                "correct_answer": "C"
+                "correct_answer": "B"
             },
             {
                 "part": 7,
@@ -256,7 +256,7 @@
                 "answer_B": "He personally designed the winter collection.",
                 "answer_C": "He is upset about competition from Barrault Bondy.",
                 "answer_D": "He has spent much of his career at Hochstein.",
-                "correct_answer": "A"
+                "correct_answer": "B"
             },
             {
                 "part": 7,
@@ -268,7 +268,7 @@
                 "answer_B": "Hochstein will release its winter collection.",
                 "answer_C": "Mr. Hugo will replace Ms. Ferrara's designs with his own.",
                 "answer_D": "Ms. Ferrara will announce new sources for shoe materials.",
-                "correct_answer": "C"
+                "correct_answer": "B"
             }
         ]
     }
