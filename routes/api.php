@@ -23,6 +23,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         Route::post('signup', 'AuthController@register');
         Route::post('login', 'AuthController@login');
         Route::group(['middleware' => 'jwt.auth'], function () {
+            Route::post('submit-examination', 'ExaminationController@submitExam');
             Route::get('auth', 'AuthController@user');
             Route::post('logout', 'AuthController@logout');
         });
