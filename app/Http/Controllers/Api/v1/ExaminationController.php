@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Auth;
 
 class ExaminationController extends Controller
 {
-    public function getExam()
+    public function getExam($code)
     {
-        return Examination::find(1)->load('questions');
+        $exam = Examination::where('code', $code)->first()->load('questions');
+        return $exam;
     }
 
     public function submitExam(Request $request)
@@ -67,4 +68,9 @@ class ExaminationController extends Controller
         return response()->json(['Logs' => $responseData]);
     }
 
+    public function getExaminationHistory()
+    {
+        $examinationLogs = ExaminationLog::where('examination_id', 1)->get();
+        return response()->json($examinationLogs);
+    }
 }

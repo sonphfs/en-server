@@ -18,10 +18,11 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         Route::get('check', function (){
             return '{"status" : "OK!"}';
         });
-        Route::get('get-exam', 'ExaminationController@getExam');
+        Route::get('get-exam/{code}', 'ExaminationController@getExam');
         Route::post('send-contact', 'ContactController@send');
         Route::post('signup', 'AuthController@register');
         Route::post('login', 'AuthController@login');
+        Route::get('exam-log', 'ExaminationController@getExaminationHistory');
         Route::group(['middleware' => 'jwt.auth'], function () {
             Route::post('submit-examination', 'ExaminationController@submitExam');
             Route::get('auth', 'AuthController@user');
