@@ -16,7 +16,7 @@ class ExaminationController extends Controller
     public function getExam($code)
     {
         $exam = Examination::where('code', $code)->first()->load('questions');
-        return $exam;
+        return $this->response($exam);
     }
 
     public function submitExam(Request $request)
@@ -65,12 +65,12 @@ class ExaminationController extends Controller
             $questionLog->save();
             $responseData['question_logs'][] = $questionLog;
         }
-        return response()->json(['Logs' => $responseData]);
+        return $this->response(['Logs' => $responseData, 'examination_log_id' => $exam->id]);
     }
 
     public function getExaminationHistory()
     {
         $examinationLogs = ExaminationLog::where('examination_id', 1)->get();
-        return response()->json($examinationLogs);
+        return $this->response(['Logs' => $examinationLogs]);
     }
 }

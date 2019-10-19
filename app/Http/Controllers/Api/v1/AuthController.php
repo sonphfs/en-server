@@ -22,7 +22,7 @@ class AuthController extends Controller
         $user->username = $params['username'];
         $user->password = bcrypt($params['password']);
         $user->save();
-        return response()->json($user, Response::HTTP_OK);
+        return $this->response($user,Response::HTTP_OK);
     }
 
     public function login(LoginRequest $request)
@@ -37,17 +37,16 @@ class AuthController extends Controller
         }
         $user = Auth::user();
         event(new \App\Events\Login($user));
-
-        return response()->json(['token' => $token], Response::HTTP_OK);
+        return $this->response(['token' => $token]);
     }
 
     public function user(Request $request)
     {
         $user = Auth::user()->load('roles');
         if ($user) {
-            return response($user, Response::HTTP_OK);
+            return $this->response($user,Response::HTTP_OK);
         }
-        return response(null, Response::HTTP_BAD_REQUEST);
+        return $this->response(null, Response::HTTP_BAD_REQUEST);
     }
 
 
@@ -55,14 +54,15 @@ class AuthController extends Controller
         $token = $request->header('Authorization');
         try {
             JWTAuth::invalidate($token);
-            return response()->json('You have successfully logged out.', Response::HTTP_OK);
+            return $this->response('You have successfully logged out.', Response::HTTP_OK);
         } catch (JWTException $e) {
-            return response()->json('Failed to logout, please try again.', Response::HTTP_BAD_REQUEST);
+            return $this->response('Failed to logout, please try again.', Response::HTTP_OK);
+
         }
     }
 
     public function refresh()
     {
-        return response(JWTAuth::getToken(), Response::HTTP_OK);
+        return $this->response(JWTAuth::getToken(), Response::HTTP_OK);
     }
 }

@@ -26,6 +26,9 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         Route::group(['middleware' => 'jwt.auth'], function () {
             Route::post('submit-examination', 'ExaminationController@submitExam');
             Route::get('auth', 'AuthController@user');
+            Route::post('/user/update-profile', 'UserController@updateProfile');
+            Route::post('/user/change-password', 'UserController@changePassword');
+            Route::get('examination-result/{id}', 'ExaminationLogController@getExaminationResult');
             Route::post('logout', 'AuthController@logout');
         });
         Route::middleware('jwt.refresh')->get('/token/refresh', 'AuthController@refresh');

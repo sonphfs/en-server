@@ -20,6 +20,6 @@ class ContactController extends Controller
         $contact->email = $requestData['email'];
         $contact->flag = 1;
         $contact->save();
-        return response()->json([$contact]);
+        return $this->response([$contact]);
     }
 }

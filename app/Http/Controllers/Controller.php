@@ -11,12 +11,12 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    protected function response($status = 200, $messages = '', $data = [])
+    protected function response($data = [], $status = 200, $messages = '')
     {
         return response()->json([
+            'result_data' => $data,
             'status' => $status,
-            'messages' => $messages,
-            'data' => $data
+            'messages' => $messages
         ]);
     }
 }
