@@ -10,6 +10,6 @@ class ExaminationLog extends Model
 
     public function questions()
     {
-        return $this->belongsToMany(Question::class, 'question_logs');
+        return $this->belongsToMany(Question::class, 'question_logs')->withPivot('choosen_answer');
     }
 }
