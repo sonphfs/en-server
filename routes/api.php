@@ -26,6 +26,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         Route::get('examination-result/{id}', 'ExaminationLogController@getExaminationResult');
         //subject
         Route::get('/subjects', 'SubjectController@getSubjects');
+        Route::get('/list-word/{id}', 'LearningWordController@getLearingWords');
         Route::group(['middleware' => 'jwt.auth'], function () {
 
             //user
