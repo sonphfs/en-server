@@ -11,8 +11,9 @@ class ExaminationLogController extends Controller
 {
     public function getExaminationResult($id)
     {
-        $examinationLog = ExaminationLog::find($id)->load('questions');
+        $examinationLog = ExaminationLog::find($id)->load('questions', 'examinations');
         $questionLogs = $examinationLog->questions;
+        $examinationInfo = $examinationLog->examinations;
         $correctAnswerCount = [];
         $correctAnswerCount['part_1'] = 0;
         $correctAnswerCount['part_2'] = 0;
@@ -62,7 +63,9 @@ class ExaminationLogController extends Controller
             'correct_answer_count' => $correctAnswerCount,
             'reading_score' => $readingScore,
             'listening_score' => $listeningScore,
-            'not_selected' => $notSelected
+            'not_selected' => $notSelected,
+            'total_question' => count($questionLogs),
+            'examination' => $examinationInfo
         ];
         return $this->response($examinationResult);
     }
