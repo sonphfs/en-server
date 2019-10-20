@@ -15,4 +15,9 @@ class Examination extends Model
     {
         return $this->belongsToMany(Question::class, 'examination_questions');
     }
+
+    public function examination_logs()
+    {
+        return $this->hasMany(ExaminationLog::class);
+    }
 }
