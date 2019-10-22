@@ -12,4 +12,9 @@ class LearningWordController extends Controller
     {
         return $this->response(LearningWord::where('subject_id', $subjectId)->get());
     }
+
+    public function getAllLearningWords()
+    {
+        return $this->response(LearningWord::all());
+    }
 }

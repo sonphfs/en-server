@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers\Api\v1;
 
-use App\User;
+use App\Helpers\UserHelper as User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    public function getUsers()
+    {
+        return $this->response(User::all());
+    }
+
     public function updateProfile(Request $request)
     {
         $request->validate([

@@ -19,6 +19,11 @@ class ExaminationController extends Controller
         return $this->response($exam);
     }
 
+    public function getExaminations()
+    {
+        return $this->response(Examination::all());
+    }
+
     public function submitExam(Request $request)
     {
         $exam = new ExaminationLog();
