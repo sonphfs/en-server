@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\v1;
 
+use App\Helpers\UserHelper;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use App\User;
@@ -13,6 +14,8 @@ use Illuminate\Http\Response;
 
 class AuthController extends Controller
 {
+    const BACKEND_SITE = 'backend';
+    const CLIENT_SITE = 'client';
 
     public function register(RegisterRequest $request)
     {
@@ -36,7 +39,16 @@ class AuthController extends Controller
             ], Response::HTTP_BAD_REQUEST);
         }
         $user = Auth::user();
-        event(new \App\Events\Login($user));
+        if($request['site'] == self::BACKEND_SITE) {
+            if(!UserHelper::isAdmin($user)) {
+                return response()->json([
+                    'status' => 'error',
+                    'error' => 'invalid.credentials',
+                    'msg' => 'Invalid Credentials.'
+                ], Response::HTTP_BAD_REQUEST);
+            }
+        }
+            event(new \App\Events\Login($user));
         return $this->response(['token' => $token]);
     }
 
