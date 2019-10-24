@@ -18,6 +18,7 @@ class CreateLessonsTable extends Migration
             $table->unsignedInteger('unit_id');
             $table->string('title');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

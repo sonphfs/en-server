@@ -22,6 +22,7 @@ class CreateExaminationsTable extends Migration
             $table->string('audio');
             $table->string('user_id')->nullable(true);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

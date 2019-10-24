@@ -30,6 +30,7 @@ class CreateQuestionsTable extends Migration
             $table->unsignedInteger('subject_id')->nullable(true);
             $table->unsignedInteger('lesson_id')->nullable(true);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

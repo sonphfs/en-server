@@ -22,6 +22,7 @@ class CreateContactsTable extends Migration
             $table->string('body');
             $table->integer('flag');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
