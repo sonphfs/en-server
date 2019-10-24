@@ -11,7 +11,18 @@ class Examination extends Model
 
     protected $table = 'examinations';
 
-    protected $fillable = ['title', 'type', 'description', 'audio'
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    
+    protected $fillable = [
+        'title', 
+        'type', 
+        'description', 
+        'audio',
+        'published',
     ];
 
     public function questions()
