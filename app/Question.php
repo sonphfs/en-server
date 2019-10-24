@@ -11,5 +11,10 @@ class Question extends Model
 
     protected $table = 'questions';
 
-    protected $fillable = ['part', 'no', 'content', 'image', 'data'];
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['part', 'no', 'content', 'image', 'data','paragraph','content','answer_A','answer_B','answer_C','answer_D','correct_answer',];
 }
