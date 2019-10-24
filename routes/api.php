@@ -41,15 +41,38 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
             Route::prefix('backend')->middleware(['isAdmin'])->group(function() {
                 Route::prefix('/users')->group(function(){
                     Route::get('/list', 'UserController@getUsers');
+                    Route::get('/create', 'UserController@create');
+                    Route::get('/show/{id}', 'UserController@show');
+                    Route::get('/update/{id}', 'UserController@update');
+                    Route::get('/delete/{id}', 'UserController@delete');
                 });
                 Route::prefix('examinations')->group(function(){
                     Route::get('/list', 'ExaminationController@getExaminations');
+                    Route::post('/create', 'ExaminationController@create');
+                    Route::get('/show/{id}', 'ExaminationController@show');
+                    Route::post('/update/{id}', 'ExaminationController@update');
+                    Route::get('/delete/{id}', 'ExaminationController@delete');
                 });
                 Route::prefix('lessons')->group(function(){
                     Route::get('/list', 'LessonController@getLessons');
+                    Route::post('/create', 'LessonController@create');
+                    Route::get('/show/{id}', 'LessonController@show');
+                    Route::post('/update/{id}', 'LessonController@update');
+                    Route::get('/delete/{id}', 'LessonController@delete');
+                });
+                Route::prefix('units')->group(function(){
+                    Route::get('/list', 'UnitController@getUnits');
+                    Route::post('/create', 'UnitController@create');
+                    Route::get('/show/{id}', 'UnitController@show');
+                    Route::post('/update/{id}', 'UnitController@update');
+                    Route::get('/delete/{id}', 'UnitController@delete');
                 });
                 Route::prefix('/learning_words')->group(function(){
                     Route::get('/list', 'LearningWordController@getAllLearningWords');
+                    Route::post('/create', 'LearningWordController@create');
+                    Route::get('/show/{id}', 'LearningWordController@show');
+                    Route::post('/update/{id}', 'LearningWordController@update');
+                    Route::post('/delete/{id}', 'LearningWordController@delete');
                 });
             });
         });

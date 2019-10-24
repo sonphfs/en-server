@@ -78,4 +78,24 @@ class ExaminationController extends Controller
         $examinationLogs = ExaminationLog::where('examination_id', 1)->get();
         return $this->response(['Logs' => $examinationLogs]);
     }
+
+    public function create()
+    {
+
+    }
+
+    public function show($id)
+    {
+
+    }
+
+    public function update(Request $request, $id)
+    {
+
+    }
+
+    public function delete($id)
+    {
+
+    }
 }
