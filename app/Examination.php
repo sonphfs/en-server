@@ -2,10 +2,13 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\BaseModel as Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Examination extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'examinations';
 
     protected $fillable = ['title', 'type', 'description', 'audio'

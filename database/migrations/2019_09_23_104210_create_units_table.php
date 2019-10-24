@@ -18,6 +18,7 @@ class CreateUnitsTable extends Migration
             $table->unsignedInteger('parent_id');
             $table->string('name');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

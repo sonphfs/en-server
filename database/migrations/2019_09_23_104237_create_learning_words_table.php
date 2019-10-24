@@ -24,6 +24,7 @@ class CreateLearningWordsTable extends Migration
             $table->string('image');
             $table->string('example');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
