@@ -49,6 +49,7 @@ class UnitController extends Controller
 
     public function delete($id)
     {
-
+        $result = Unit::find($id)->delete();
+        return $this->response($result);
     }
 }
