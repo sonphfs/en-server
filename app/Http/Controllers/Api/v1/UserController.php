@@ -45,14 +45,26 @@ class UserController extends Controller
         return $this->response($user->update());
     }
 
-    public function create()
+    public function create(Request $request)
     {
-
+        $requestData = $request->all();
+        try{
+            $user = new User();
+            $user->username = $requestData['username'];
+            $user->password = bcrypt($requestData['username']);
+            $user->phone = $requestData['username'];
+            $user->address = $requestData['username'];
+            $user->email = $requestData['username'];
+            $result = $user->save();
+        }catch (\Exception $e) {
+            return $this->response('Create user failed!', 422);
+        }
+        return $this->response($result);
     }
 
     public function show($id)
     {
-
+        return $this->response(User::findOrFail($id));
     }
 
     public function update(Request $request, $id)
@@ -62,6 +74,7 @@ class UserController extends Controller
 
     public function delete($id)
     {
-
+        $result = User::find($id)->detete();
+        return $this->response($result);
     }
 }
