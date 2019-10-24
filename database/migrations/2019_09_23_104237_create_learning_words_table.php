@@ -20,8 +20,8 @@ class CreateLearningWordsTable extends Migration
             $table->string('type');
             $table->string('meaning');
             $table->string('pronunciation');
-            $table->string('audio');
-            $table->string('image');
+            $table->string('audio')->nullable();
+            $table->string('image')->nullable();
             $table->string('example');
             $table->timestamps();
             $table->softDeletes();
