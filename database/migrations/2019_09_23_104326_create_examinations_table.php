@@ -19,7 +19,8 @@ class CreateExaminationsTable extends Migration
             $table->string('title');
             $table->string('type');
             $table->string('description');
-            $table->string('audio');
+            $table->string('audio')->nullable();
+            $table->integer('published')->nullable();
             $table->string('user_id')->nullable(true);
             $table->timestamps();
             $table->softDeletes();

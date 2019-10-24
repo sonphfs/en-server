@@ -22,6 +22,7 @@ class CreateQuestionsTable extends Migration
             $table->string('paragraph',4096)->nullable(true);
             $table->string('content')->nullable(true);
             $table->string('image')->nullable(true);
+            $table->string('audio')->nullable(true);
             $table->string('answer_A')->nullable(true);
             $table->string('answer_B')->nullable(true);
             $table->string('answer_C')->nullable(true);
