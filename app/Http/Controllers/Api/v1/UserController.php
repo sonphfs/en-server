@@ -16,15 +16,24 @@ class UserController extends Controller
 
     public function updateProfile(Request $request)
     {
-        $request->validate([
-            'username' => 'required|min:3|max:20',
-            'phone' => 'required|min:3|max:20',
-            'address' => 'required|min:3|max:20',
-        ]);
         $user = Auth::user();
-        $user->username = $request->username;
-        $user->phone = $request->phone;
-        $user->address = $request->address;
+        if(!$request->file('avatar')) {
+            $request->validate([
+                'username' => 'required|min:3|max:20',
+                'phone' => 'required|min:3|max:20',
+                'address' => 'required|min:3|max:20',
+            ]);
+            $user->username = $request->username;
+            $user->phone = $request->phone;
+            $user->address = $request->address;
+        }else {
+            $file = $request->file('avatar');
+            //Move Uploaded File
+            $destinationPath = 'uploads/users';
+            $result = $file->move($destinationPath,$file->getFileName().'.'.$file->getClientOriginalExtension());
+            $user->avatar = $result->getPathname();
+        }
+
         $result = $user->update();
         return $this->response($result);
     }
