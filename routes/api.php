@@ -18,6 +18,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         Route::get('check', function (){
             return '{"status" : "OK!"}';
         });
+        Route::get('send', 'ContactController@sendMail');
         Route::get('get-exam/{code}', 'ExaminationController@getExam');
         Route::post('send-contact', 'ContactController@send');
         Route::post('signup', 'AuthController@register');

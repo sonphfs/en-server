@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Contact;
+use App\ExaminationLog;
 use App\Http\Requests\ContactRequest;
+use App\Mail\ExaminationResult;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Controller;
 
 class ContactController extends Controller
@@ -21,5 +25,10 @@ class ContactController extends Controller
         $contact->flag = 1;
         $contact->save();
         return $this->response([$contact]);
+    }
+
+    public function sendMail()
+    {
+        Mail::to(User::find(1))->send(new ExaminationResult());
     }
 }
