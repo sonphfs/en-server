@@ -18,8 +18,12 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         Route::get('check', function (){
             return '{"status" : "OK!"}';
         });
+        Route::get('mail', function (){
+            return view('mails.toeic_result');
+        });
         Route::get('get-exam/{code}', 'ExaminationController@getExam');
         Route::post('send-contact', 'ContactController@send');
+        Route::get('send', 'ContactController@sendMail');
         Route::post('signup', 'AuthController@register');
         Route::post('login', 'AuthController@login');
         Route::get('exam-log', 'ExaminationController@getExaminationHistory');
