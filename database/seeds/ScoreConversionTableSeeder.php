@@ -25,7 +25,6 @@ class ScoreConversionTableSeeder extends Seeder
 
         for ($i = 0; $i < count($importData); $i++) {
             ScoreConversion::create($importData[$i]);
-            var_dump($importData[$i]);
         }
 
         return 'Jobi done or what ever';
