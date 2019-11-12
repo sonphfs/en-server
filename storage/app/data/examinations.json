@@ -4,6 +4,7 @@
         "type": "SHORT_TEST",
         "description": "Bài thi rút gọn",
         "audio": "https://tienganhmoingay.com/static/ToeicTests/audios/Ets_Toeic_Test_1/Ets_Toeic_Test_1.mp3",
+        "status": 0,
         "questions": [
             {
                 "part": 1,
