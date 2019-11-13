@@ -3,6 +3,9 @@
     "username": "sonph",
     "email": "sonph@gmail.com",
     "password": "admin123",
+    "phone": "0376863045",
+    "address": "HN",
+    "birthday": "2019-10-29",
     "roles" : [
       {
         "name" : "ROOT",
@@ -18,6 +21,9 @@
     "username": "haind",
     "email": "haind@gmail.com",
     "password": "admin123",
+    "phone": "0376863045",
+    "address": "HN",
+    "birthday": "2019-10-29",
     "roles" : [
       {
         "name" : "ADMIN",
@@ -29,6 +35,9 @@
     "username": "sonph1",
     "email": "sonph1@gmail.com",
     "password": "admin123",
+    "phone": "0376863045",
+    "address": "HN",
+    "birthday": "2019-10-29",
     "roles" : [
       {
         "name" : "USER",
