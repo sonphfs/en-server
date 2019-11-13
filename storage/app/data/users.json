@@ -1,0 +1,41 @@
+[
+  {
+    "username": "sonph",
+    "email": "sonph@gmail.com",
+    "password": "admin123",
+    "roles" : [
+      {
+        "name" : "ROOT",
+        "description": "FULL PERMISSION"
+      },
+      {
+        "name" : "ADMIN",
+        "description": "ADMINISTRATORS"
+      }
+    ]
+  },
+  {
+    "username": "haind",
+    "email": "haind@gmail.com",
+    "password": "admin123",
+    "roles" : [
+      {
+        "name" : "ADMIN",
+        "description": "ADMINISTRATORS"
+      }
+    ]
+  },
+  {
+    "username": "sonph1",
+    "email": "sonph1@gmail.com",
+    "password": "admin123",
+    "roles" : [
+      {
+        "name" : "USER",
+        "description": "SYSTEM MEMBERS"
+      }
+    ]
+  }
+
+
+]
