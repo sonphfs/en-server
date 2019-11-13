@@ -27,10 +27,10 @@ class ExaminationController extends Controller
         $requestData = $request->all();
         if ($request->file('audio')) {
             $file = $request->file('audio');
-            $name = time() . $file->getClientOriginalName();
-            $filePath = 'images/examinations/' . $name;
-            Storage::disk('s3')->put($filePath, file_get_contents($file));
-            $exam->audio = $filePath;
+            //Move Uploaded File
+            $destinationPath = 'uploads/examinations/images';
+            $result = $file->move($destinationPath, $this->_generateRandomString() .'_'.$file->getClientOriginalName());
+            $exam->audio = $result->getPathName();
         }
         try {
             $exam->title = $requestData['title'];
