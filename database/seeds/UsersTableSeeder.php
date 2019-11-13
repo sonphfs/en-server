@@ -27,6 +27,9 @@ class UsersTableSeeder extends Seeder
             $user = new User();
             $user->username = $item->username;
             $user->email = $item->email;
+            $user->phone = $item->phone;
+            $user->address = $item->address;
+            $user->birthday = $item->birthday;
             $user->password = bcrypt($item->password);
             $user->save();
             foreach ($item->roles as $role) {
