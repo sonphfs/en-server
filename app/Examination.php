@@ -16,11 +16,11 @@ class Examination extends Model
      *
      * @var array
      */
-    
+
     protected $fillable = [
-        'title', 
-        'type', 
-        'description', 
+        'title',
+        'type',
+        'description',
         'audio',
         'published',
     ];
@@ -34,4 +34,10 @@ class Examination extends Model
     {
         return $this->hasMany(ExaminationLog::class);
     }
+
+    public function examination_type()
+    {
+        return $this->hasOne(ExaminationType::class);
+    }
+
 }
