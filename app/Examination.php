@@ -37,7 +37,7 @@ class Examination extends Model
 
     public function examination_type()
     {
-        return $this->hasOne(ExaminationType::class);
+        return $this->hasOne(ExaminationType::class, 'id', 'type');
     }
 
 }
