@@ -17,7 +17,7 @@ class CreateExaminationsTable extends Migration
             $table->increments('id');
             $table->string('code');
             $table->string('title');
-            $table->string('type');
+            $table->unsignedInteger('type');
             $table->string('description');
             $table->string('audio')->nullable();
             $table->integer('status')->nullable();
