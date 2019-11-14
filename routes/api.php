@@ -53,9 +53,9 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                 Route::prefix('examinations')->group(function(){
                     Route::get('/list', 'ExaminationController@getExaminations');
                     Route::post('/create', 'ExaminationController@create');
-                    Route::get('/show/{id}', 'ExaminationController@show');
-                    Route::post('/update/{id}', 'ExaminationController@update');
-                    Route::get('/delete/{id}', 'ExaminationController@delete');
+                    Route::get('/show/{code}', 'ExaminationController@show');
+                    Route::post('/update/{code}', 'ExaminationController@update');
+                    Route::get('/delete/{code}', 'ExaminationController@delete');
                 });
                 Route::prefix('lessons')->group(function(){
                     Route::get('/list', 'LessonController@getLessons');

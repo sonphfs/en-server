@@ -18,7 +18,7 @@ class ExaminationController extends Controller
 
     public function getExaminations()
     {
-        return $this->response(Examination::all());
+        return $this->response(Examination::all()->load('examination_type'));
     }
 
     public function create(Request $request)
@@ -45,9 +45,14 @@ class ExaminationController extends Controller
         }
     }
 
-    public function show($id)
+    public function show($code)
     {
+        return $this->response(Examination::where('code', $code)->first()->load('questions'));
+    }
 
+    public function edit($code)
+    {
+        return $this->response(Examination::where('code', $code)->first()->load('examination_type'));
     }
 
     public function update(Request $request, $id)
