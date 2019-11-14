@@ -37,6 +37,7 @@ class ExaminationController extends Controller
             $exam->description = $requestData['description'];
             $exam->type = $requestData['type'];
             $exam->code = $this->_generateRandomString();
+            $exam->status = 0;
             $exam->save();
             return $this->response($exam);
         }catch (Exception $e) {
