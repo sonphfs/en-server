@@ -132,10 +132,10 @@
                 "no": 11,
                 "content": "Ms. Durkin asked for volunteers to help _____ with the employee fitness program.",
                 "image": "",
-                "answer_A": "",
-                "answer_B": "",
-                "answer_C": "",
-                "answer_D": "",
+                "answer_A": "me",
+                "answer_B": "you",
+                "answer_C": "them",
+                "answer_D": "her",
                 "correct_answer": "B"
             },
             {
