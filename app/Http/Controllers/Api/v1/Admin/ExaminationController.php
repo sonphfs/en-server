@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\v1\Admin;
 
 use App\Examination;
 use App\ExaminationLog;
+use App\ExaminationType;
 use App\Question;
 use App\QuestionLog;
 use App\ScoreConversion;
@@ -50,9 +51,33 @@ class ExaminationController extends Controller
         return $this->response(Examination::where('code', $code)->first()->load('questions'));
     }
 
+    public function publish(Request $request, $code)
+    {
+        $status = $request->all()['status'];
+        $examination = Examination::where('code', $code)->first();
+        $examination->status = $status;
+        $result  = $examination->save();
+        if($result == true) {
+            return $this->response(['updated' => true, 'status' => $status]);
+        }
+        return $this->response();
+    }
+
+    public function getExaminationTypes()
+    {
+        return $this->response(ExaminationType::where('type', 'TOEIC_TEST')->get());
+    }
+
     public function edit($code)
     {
         return $this->response(Examination::where('code', $code)->first()->load('examination_type'));
+    }
+
+    public function getQuestionByPart($code, $part)
+    {
+        $exam = Examination::where('code', $code)->first();
+        $questions = $exam->questions->where('part', $part);
+        return $this->response($questions);
     }
 
     public function update(Request $request, $id)

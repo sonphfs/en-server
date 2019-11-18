@@ -22,6 +22,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
             return view('mails.toeic_result');
         });
         Route::get('get-exam/{code}', 'ExaminationController@getExam');
+        Route::get('get-list-exam', 'ExaminationController@getList');
         Route::post('send-contact', 'ContactController@send');
         Route::get('send', 'ContactController@sendMail');
         Route::post('signup', 'AuthController@register');
@@ -56,6 +57,9 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::get('/show/{code}', 'ExaminationController@show');
                     Route::post('/update/{code}', 'ExaminationController@update');
                     Route::get('/delete/{code}', 'ExaminationController@delete');
+                    Route::post('/publish/{code}', 'ExaminationController@publish');
+                    Route::get('/examination-types', 'ExaminationController@getExaminationTypes');
+                    Route::get('/questions/{code}/{part}', 'ExaminationController@getQuestionByPart');
                 });
                 Route::prefix('lessons')->group(function(){
                     Route::get('/list', 'LessonController@getLessons');

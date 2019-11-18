@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\v1;
 
 use App\Examination;
 use App\ExaminationLog;
+use App\ExaminationType;
 use App\Question;
 use App\QuestionLog;
 use App\ScoreConversion;
@@ -17,6 +18,17 @@ class ExaminationController extends Controller
     {
         $exam = Examination::where('code', $code)->first()->load('questions');
         return $this->response($exam);
+    }
+
+    public function getList()
+    {
+        $examinationTypes = ExaminationType::where('type', 'TOEIC_TEST')->get();
+        $typeIds = [];
+        foreach ($examinationTypes as $examinationType) {
+                $typeIds[] = $examinationType->id;
+        }
+        $examinationList = Examination::where('status', 1)->whereIn('type', $typeIds)->get();
+        return $this->response(['examinationList' => $examinationList, 'examinationTypes' => $examinationTypes]);
     }
 
     public function getExaminations()
