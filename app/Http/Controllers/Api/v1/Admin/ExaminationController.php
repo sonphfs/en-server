@@ -63,6 +63,12 @@ class ExaminationController extends Controller
         return $this->response();
     }
 
+    public function updatePart(Request $request)
+    {
+        $requestData = $request->all();
+        return $this->response($requestData);
+    }
+
     public function getExaminationTypes()
     {
         return $this->response(ExaminationType::where('type', 'TOEIC_TEST')->get());

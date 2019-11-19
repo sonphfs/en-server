@@ -60,6 +60,8 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::post('/publish/{code}', 'ExaminationController@publish');
                     Route::get('/examination-types', 'ExaminationController@getExaminationTypes');
                     Route::get('/questions/{code}/{part}', 'ExaminationController@getQuestionByPart');
+                    Route::post('/update-part', 'ExaminationController@updatePart');
+
                 });
                 Route::prefix('lessons')->group(function(){
                     Route::get('/list', 'LessonController@getLessons');
