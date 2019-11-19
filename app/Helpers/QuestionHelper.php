@@ -22,6 +22,7 @@ class QuestionHelper
         }else {
             $questionObj->code = CommonHelper::generateRandomString();
         }
+        $questionObj->part = $question['part'];
         $questionObj->answer_A = $question['answer_A'];
         $questionObj->answer_B = $question['answer_B'];
         $questionObj->answer_C = $question['answer_C'];
@@ -33,7 +34,7 @@ class QuestionHelper
 
     public static function updatePivotData($examinationId, $questionId)
     {
-        $examinationQuestion = ExaminationQuestion::where('examination_id', 111)
+        $examinationQuestion = ExaminationQuestion::where('examination_id', $examinationId)
             ->where('question_id', $questionId)
             ->first();
         if($examinationQuestion == null) {
