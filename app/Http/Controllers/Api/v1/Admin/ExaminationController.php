@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\v1\Admin;
 use App\Examination;
 use App\ExaminationLog;
 use App\ExaminationType;
+use App\Helpers\QuestionHelper;
 use App\Question;
 use App\QuestionLog;
 use App\ScoreConversion;
@@ -66,7 +67,15 @@ class ExaminationController extends Controller
     public function updatePart(Request $request)
     {
         $requestData = $request->all();
-        return $this->response($requestData);
+        $questions = $requestData['questions'];
+        $exam = Examination::where('code', $requestData['code'])->first();
+        if(!empty($exam)) {
+            foreach ($questions as $question) {
+                $questionObj = QuestionHelper::createOrUpdateQuestion($question);
+                QuestionHelper::updatePivotData($exam->id, $questionObj->id);
+            }
+        }
+        return $this->response($questions);
     }
 
     public function getExaminationTypes()
