@@ -11,6 +11,8 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    const PER_PAGE = 10;
+
     protected function response($data = [], $status = 200, $messages = '')
     {
         return response()->json([

@@ -10,7 +10,7 @@ class UnitController extends Controller
 {
     public function getUnits()
     {
-        return $this->response(Unit::all());
+        return $this->response(Unit::paginate(self::PER_PAGE));
     }
 
     public function create(Request $request)

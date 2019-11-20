@@ -10,7 +10,7 @@ class SubjectController extends Controller
 {
     public function getSubjects()
     {
-        return $this->response(Subject::all());
+        return $this->response(Subject::paginate(self::PER_PAGE));
     }
 
     public function create(Request $request)

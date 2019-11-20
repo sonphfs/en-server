@@ -78,11 +78,18 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::get('/delete/{id}', 'UnitController@delete');
                 });
                 Route::prefix('/learning_words')->group(function(){
-                    Route::get('/list', 'LearningWordController@getAllLearningWords');
+                    Route::get('/list', 'LearningWordController@getLearningWords');
                     Route::post('/create', 'LearningWordController@create');
                     Route::get('/show/{id}', 'LearningWordController@show');
                     Route::post('/update/{id}', 'LearningWordController@update');
                     Route::post('/delete/{id}', 'LearningWordController@delete');
+                });
+                Route::prefix('/subjects')->group(function(){
+                    Route::get('/list', 'SubjectController@getSubjects');
+                    Route::post('/create', 'SubjectController@create');
+                    Route::get('/show/{id}', 'SubjectController@show');
+                    Route::post('/update/{id}', 'SubjectController@update');
+                    Route::post('/delete/{id}', 'SubjectController@delete');
                 });
             });
         });

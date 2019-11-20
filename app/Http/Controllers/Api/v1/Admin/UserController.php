@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api\v1\Admin;
 
-use App\Helpers\UserHelper as User;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function getUsers()
     {
-        return $this->response(User::all());
+        return $this->response(User::paginate(self::PER_PAGE));
     }
 
     public function updateProfile(Request $request)

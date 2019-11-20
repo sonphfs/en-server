@@ -10,9 +10,10 @@ use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 class LearningWordController extends Controller
 {
 
-    public function getAllLearningWords()
+    public function getLearningWords()
     {
-        return $this->response(LearningWord::all());
+
+        return $this->response(LearningWord::paginate(self::PER_PAGE));
     }
 
     public function create(Request $request)

@@ -12,7 +12,7 @@ class LessonController extends Controller
 
     public function getLessons()
     {
-        return $this->response(Lesson::all());
+        return $this->response(Lesson::with('unit')->paginate(self::PER_PAGE));
     }
 
     public function create(Request $request)

@@ -20,7 +20,7 @@ class ExaminationController extends Controller
 
     public function getExaminations()
     {
-        return $this->response(Examination::all()->load('examination_type'));
+        return $this->response(Examination::with('examination_type')->paginate(self::PER_PAGE));
     }
 
     public function create(Request $request)
