@@ -17,4 +17,9 @@ class Lesson extends Model
      * @var array
      */
     protected $fillable = ['unit_id', 'title', 'image'];
+
+    public function unit()
+    {
+        return $this->belongsTo(Unit::class);
+    }
 }
