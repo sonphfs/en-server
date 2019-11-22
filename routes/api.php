@@ -56,7 +56,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::post('/create', 'ExaminationController@create');
                     Route::get('/show/{code}', 'ExaminationController@show');
                     Route::post('/update/{code}', 'ExaminationController@update');
-                    Route::get('/delete/{code}', 'ExaminationController@delete');
+                    Route::post('/delete', 'ExaminationController@delete');
                     Route::post('/publish/{code}', 'ExaminationController@publish');
                     Route::get('/examination-types', 'ExaminationController@getExaminationTypes');
                     Route::get('/questions/{code}/{part}', 'ExaminationController@getQuestionByPart');

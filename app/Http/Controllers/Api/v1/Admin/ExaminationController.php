@@ -100,8 +100,17 @@ class ExaminationController extends Controller
 
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
+        try {
+            $code = $request->all()['code'];
+            $exam = Examination::where('code', $code)->first();
+            $exam->delete();
+            if($exam->deleted_at != null)
+                return $this->response($exam);
+        }catch (\Exception $e) {
+            return response()->json(['message' => 'Deleted fail!'], 400);
 
+        }
     }
 }
