@@ -81,9 +81,17 @@ class UserController extends Controller
 
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
-        $result = User::find($id)->detete();
-        return $this->response($result);
+        try {
+            $id = $request->all()['id'];
+            $user = User::find($id);
+            $user->delete();
+            if($user->deleted_at != null)
+                return $this->response($user);
+        }catch (\Exception $e) {
+            return response()->json(['message' => 'Deleted fail!'], 400);
+
+        }
     }
 }

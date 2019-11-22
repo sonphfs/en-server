@@ -48,8 +48,8 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::get('/list', 'UserController@getUsers');
                     Route::get('/create', 'UserController@create');
                     Route::get('/show/{id}', 'UserController@show');
-                    Route::get('/update/{id}', 'UserController@update');
-                    Route::get('/delete/{id}', 'UserController@delete');
+                    Route::post('/update/{id}', 'UserController@update');
+                    Route::post('/delete', 'UserController@delete');
                 });
                 Route::prefix('examinations')->group(function(){
                     Route::get('/list', 'ExaminationController@getExaminations');
