@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,7 +8,8 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
     <!-- Bootstrap CSS -->
-    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
+    {{--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
 </head>
 
 <body class="text-center">
@@ -16,7 +18,7 @@
     <div id=":mz" tabindex="-1"></div>
     <div id=":mo" class="ii gt">
         <div id=":mn" class="a3s aXjCH ">
-            <div style="font-family:helvetica,arial,sans-serif;font-size:15px;color:#000;background:#e7e7e7;padding-top:20px;line-height:20px">
+            <div style="font-family:helvetica,arial,sans-serif;font-size:15px;color:#000;background:#e7e7e7;padding-top:20px;line-height:20px; padding-bottom: 20px;">
                 <div class="adM">
                 </div>
                 <div style="width:100%;max-width:600px;margin:auto;background:#fff;border-radius:15px">
@@ -37,44 +39,78 @@
                         </tbody>
                     </table>
 
-
                     <table style="margin-right:auto;margin-left:auto;padding:20px 40px">
                         <tbody>
                         <tr>
                             <td>
-                                <p><span style="color:#000000"><span
-                                                style="font-family:Arial,Helvetica,sans-serif"><span
-                                                    style="font-size:14px"><strong>Bạn Phạm Hùng Sơn thân mến,</strong></span></span></span>
-                                </p>
+                                <p><span style="color:#000000"><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:14px"><strong>Hi Sonph ,</strong></span></span></span></p>
 
                                 <p><span style="color:#000000;font-family:Arial,Helvetica,sans-serif"><span
-                                                style="font-size:14px">Có thể bạn quá bận rộn nên không nhớ, hôm nay đã là '</span></span><span
-                                            style="color:#ff3300"><span
-                                                style="font-family:Arial,Helvetica,sans-serif"><span
-                                                    style="font-size:14px">ngày cuối cùng'</span></span></span><span
-                                            style="color:#000000;font-family:Arial,Helvetica,sans-serif"><span
-                                                style="font-size:14px"> của chương trình </span></span><u><span
-                                                style="color:#000000"><span
-                                                    style="font-family:Arial,Helvetica,sans-serif"><span
-                                                        style="font-size:14px">DOUBLE TIME</span></span></span></u><span
-                                            style="color:#000000;font-family:Arial,Helvetica,sans-serif"><span
-                                                style="font-size:14px">&nbsp;- Nhân đôi giá trị tài khoản&nbsp;các&nbsp;gói học tiếng Anh VOCA&nbsp;theo lộ trình - rồi ấy.&nbsp;</span></span>
+                                                style="font-size:14px">Bạn vừa thi thử toeic trên hệ thống ENC. Kết quả thi của bạn như sau:</span></span>
                                 </p>
 
                                 <p><span style="color:#000000"><span
                                                 style="font-family:Arial,Helvetica,sans-serif"><span
-                                                    style="font-size:14px">Vậy thì tranh thủ liền đi nè, không còn thời gian nữa đâu nha!^^</span></span></span>
+                                                    style="font-size:14px">
+                                                    Bài thi: {{ $examinationResult->examination->title }}
+                                            </span></span>
+                                            </span>
                                 </p>
-
+                                <p><span style="color:#000000"><span
+                                                style="font-family:Arial,Helvetica,sans-serif"><span
+                                                    style="font-size:14px">
+                                                    Mã đề: {{ $examinationResult->examination->code }}
+                                            </span></span>
+                                            </span>
+                                </p>
+                                <p><span style="color:#000000"><span
+                                                style="font-family:Arial,Helvetica,sans-serif"><span
+                                                    style="font-size:14px">
+                                                    Số câu đúng:
+                                            </span></span>
+                                            </span>
+                                </p>
+                                <p><span style="color:#000000"><span
+                                                style="font-family:Arial,Helvetica,sans-serif"><span
+                                                    style="font-size:14px">
+                                                    Số câu sai:
+                                            </span></span>
+                                            </span>
+                                </p>
+                                <p><span style="color:#000000"><span
+                                                style="font-family:Arial,Helvetica,sans-serif"><span
+                                                    style="font-size:14px">
+                                                    Số câu chưa chọn:
+                                            </span></span>
+                                            </span>
+                                </p>
+                                <p><span style="color:#000000"><span
+                                                style="font-family:Arial,Helvetica,sans-serif"><span
+                                                    style="font-size:14px">
+                                                    Điểm nghe:
+                                            </span></span>
+                                            </span>
+                                </p>
+                                <p><span style="color:#000000"><span
+                                                style="font-family:Arial,Helvetica,sans-serif"><span
+                                                    style="font-size:14px">
+                                                    Điểm đọc:
+                                            </span></span>
+                                            </span>
+                                </p>
+                                <p><span style="color:#000000"><span
+                                                style="font-family:Arial,Helvetica,sans-serif"><span
+                                                    style="font-size:14px">
+                                                    Tổng điểm: {{ $examinationResult->total_score }}
+                                            </span></span>
+                                            </span>
+                                </p>
 
                             </td>
                         </tr>
                         <tr style="text-align:center">
                             <td>
-                                <p><a href="http://localhost:8080/"
-                                      style="width:150px;height:45px;display:inline-block;background:#7ac60c;text-align:center;line-height:45px;color:#fff;text-decoration:none;border-radius:23px;font-weight:600"
-                                      target="_blank"
-                                      data-saferedirecturl="">Xem chi tiết</a>
+                                <p><a href="http://localhost:8080/" style="width:150px;height:45px;display:inline-block;background:#7ac60c;text-align:center;line-height:45px;color:#fff;text-decoration:none;border-radius:23px;font-weight:600" target="_blank" data-saferedirecturl="">Xem chi tiết</a>
                                 </p>
                             </td>
                         </tr>
@@ -92,4 +128,5 @@
     <div class="hi"></div>
 </div>
 </body>
+
 </html>

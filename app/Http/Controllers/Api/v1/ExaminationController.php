@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\v1;
 use App\Examination;
 use App\ExaminationLog;
 use App\ExaminationType;
+use App\Mail\ExaminationResult;
 use App\Question;
 use App\QuestionLog;
 use App\ScoreConversion;
@@ -12,6 +13,7 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class ExaminationController extends Controller
 {
@@ -69,7 +71,8 @@ class ExaminationController extends Controller
         }
         $readingScore = ScoreConversion::where('num', $readingCorrectNum)->first()['reading_score'];
         $listeningScore = ScoreConversion::where('num', $listeningCorrectNum)->first()['listening_score'];
-        $exam->user_id = Auth::user()->id;
+        $user = Auth::user();
+        $exam->user_id = $user->id;
         $exam->examination_id = 1;
         $exam->total_score = $readingScore + $listeningScore;
         $exam->save();
@@ -83,6 +86,8 @@ class ExaminationController extends Controller
             $questionLog->save();
             $responseData['question_logs'][] = $questionLog;
         }
+        $examLog = ExaminationLog::where('id', $exam->id)->first()->load('examination','examination.examination_type');
+        Mail::to($user)->send(new ExaminationResult($examLog));
         return $this->response(['Logs' => $responseData, 'examination_log_id' => $exam->id]);
     }
 
