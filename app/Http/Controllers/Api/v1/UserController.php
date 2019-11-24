@@ -29,13 +29,13 @@ class UserController extends Controller
         }else {
             $file = $request->file('avatar');
             //Move Uploaded File
-            $destinationPath = 'uploads/users';
+            $destinationPath = self::USER_AVATARS_FOLDER;
             $result = $file->move($destinationPath,$file->getFileName().'.'.$file->getClientOriginalExtension());
             $user->avatar = $result->getPathname();
         }
 
-        $result = $user->update();
-        return $this->response($result);
+        $user->update();
+        return $this->response($user);
     }
 
     public function changePassword(Request $request)

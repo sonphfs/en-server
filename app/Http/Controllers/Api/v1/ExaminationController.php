@@ -8,6 +8,7 @@ use App\ExaminationType;
 use App\Question;
 use App\QuestionLog;
 use App\ScoreConversion;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -89,6 +90,16 @@ class ExaminationController extends Controller
     {
         $examinationLogs = ExaminationLog::where('examination_id', 1)->get();
         return $this->response(['Logs' => $examinationLogs]);
+    }
+
+    public function getToeicExamHistories()
+    {
+        $user = Auth::user();
+        $toeicData = ExaminationLog::where('user_id', $user->id)->paginate(self::PER_PAGE);
+        $totalPage = $toeicData->lastPage();
+        $toeicExaminationHistories = $toeicData->load('examination', 'examination.examination_type');
+
+        return $this->response(['examHistories'=> $toeicExaminationHistories, 'totalPage' => $totalPage]);
     }
 
 }

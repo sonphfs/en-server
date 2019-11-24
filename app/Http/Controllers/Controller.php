@@ -12,6 +12,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     const PER_PAGE = 10;
+    const USER_AVATARS_FOLDER = 'enc/uploads/users/avatars/';
 
     protected function response($data = [], $status = 200, $messages = '')
     {

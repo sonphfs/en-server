@@ -13,7 +13,7 @@ class ExaminationLog extends Model
         return $this->belongsToMany(Question::class, 'question_logs')->withPivot('choosen_answer');
     }
 
-    public function examinations()
+    public function examination()
     {
         return $this->belongsTo(Examination::class, 'examination_id');
     }

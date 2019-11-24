@@ -29,6 +29,7 @@ class UsersTableSeeder extends Seeder
             $user->email = $item->email;
             $user->phone = $item->phone;
             $user->address = $item->address;
+            $user->avatar = $item->avatar;
             $user->birthday = $item->birthday;
             $user->password = bcrypt($item->password);
             $user->save();

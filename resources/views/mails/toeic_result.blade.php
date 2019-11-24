@@ -8,71 +8,88 @@
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
     <!-- Bootstrap CSS -->
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
-    <style>
-        .text-center {
-    text-align: center!important;
-}
-body {
-    margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-}
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-        .mt-3, .my-3 {
-    margin-top: 1rem!important;
-}
-jumbotron {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color: #e9ecef;
-    border-radius: .3rem;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-.lead {
-    font-size: 1.25rem;
-    font-weight: 300;
-}
-p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-.btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-}
-.btn-group-lg>.btn, .btn-lg {
-    padding: .5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: .3rem;
-}
-.btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-}
-    </style>
 </head>
 
 <body class="text-center">
-<div class="container">
-    <div class="jumbotron mt-3">
-        <h1>Kết quả thi thử TOEIC</h1>
-        <p class="lead">Điểm 990</p>
-        <a class="btn btn-lg btn-primary" href="#" role="button">EN-C &raquo;</a>
+<div class="">
+    <div class="aHl"></div>
+    <div id=":mz" tabindex="-1"></div>
+    <div id=":mo" class="ii gt">
+        <div id=":mn" class="a3s aXjCH ">
+            <div style="font-family:helvetica,arial,sans-serif;font-size:15px;color:#000;background:#e7e7e7;padding-top:20px;line-height:20px">
+                <div class="adM">
+                </div>
+                <div style="width:100%;max-width:600px;margin:auto;background:#fff;border-radius:15px">
+                    <div class="adM">
+                    </div>
+                    <table style="background:#00c3f8;width:100%;padding-top:30px;border-radius:10px 10px 0px 0px;padding-left:40px;padding-bottom:30px">
+                        <tbody>
+                        <tr>
+                            <td style="border-right:1px solid #fff;max-width:142px;height:45px">
+                                <h2 style="color: #fff">
+                                    ENC
+                                </h2>
+                            </td>
+                            <td style="text-decoration:none;border-style:none;color:#ffffff;padding-left:15px;font-family:'Museo Sans Rounded',Museo Sans Rounded,'Museo Sans',Museo Sans,'Helvetica Neue',Helvetica,Arial,sans-serif;border-width:0px">
+                                Chúng tôi hướng đến những điều tuyệt vời nhất!
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+                    <table style="margin-right:auto;margin-left:auto;padding:20px 40px">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <p><span style="color:#000000"><span
+                                                style="font-family:Arial,Helvetica,sans-serif"><span
+                                                    style="font-size:14px"><strong>Bạn Phạm Hùng Sơn thân mến,</strong></span></span></span>
+                                </p>
+
+                                <p><span style="color:#000000;font-family:Arial,Helvetica,sans-serif"><span
+                                                style="font-size:14px">Có thể bạn quá bận rộn nên không nhớ, hôm nay đã là '</span></span><span
+                                            style="color:#ff3300"><span
+                                                style="font-family:Arial,Helvetica,sans-serif"><span
+                                                    style="font-size:14px">ngày cuối cùng'</span></span></span><span
+                                            style="color:#000000;font-family:Arial,Helvetica,sans-serif"><span
+                                                style="font-size:14px"> của chương trình </span></span><u><span
+                                                style="color:#000000"><span
+                                                    style="font-family:Arial,Helvetica,sans-serif"><span
+                                                        style="font-size:14px">DOUBLE TIME</span></span></span></u><span
+                                            style="color:#000000;font-family:Arial,Helvetica,sans-serif"><span
+                                                style="font-size:14px">&nbsp;- Nhân đôi giá trị tài khoản&nbsp;các&nbsp;gói học tiếng Anh VOCA&nbsp;theo lộ trình - rồi ấy.&nbsp;</span></span>
+                                </p>
+
+                                <p><span style="color:#000000"><span
+                                                style="font-family:Arial,Helvetica,sans-serif"><span
+                                                    style="font-size:14px">Vậy thì tranh thủ liền đi nè, không còn thời gian nữa đâu nha!^^</span></span></span>
+                                </p>
+
+
+                            </td>
+                        </tr>
+                        <tr style="text-align:center">
+                            <td>
+                                <p><a href="http://localhost:8080/"
+                                      style="width:150px;height:45px;display:inline-block;background:#7ac60c;text-align:center;line-height:45px;color:#fff;text-decoration:none;border-radius:23px;font-weight:600"
+                                      target="_blank"
+                                      data-saferedirecturl="">Xem chi tiết</a>
+                                </p>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <div style="padding:30px 30px 0px"></div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div id=":n4" class="ii gt" style="display:none">
+        <div id=":n3" class="a3s aXjCH undefined"></div>
+    </div>
+    <div class="hi"></div>
 </div>
 </body>
 </html>

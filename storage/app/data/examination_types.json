@@ -1,10 +1,10 @@
 [
     {
-        "name": "FULL TEST",
+        "name": "SHORT TEST",
         "type": "TOEIC_TEST"
     },
     {
-        "name": "SHORT TEST",
+        "name": "FULL TEST",
         "type": "TOEIC_TEST"
     },
     {

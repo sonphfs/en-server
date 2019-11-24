@@ -1,10 +1,10 @@
 [
     {
         "title": "BÀI THI 12/10/1019",
-        "type": 1,
+        "type": 2,
         "description": "Bài thi rút gọn",
         "audio": "https://tienganhmoingay.com/static/ToeicTests/audios/Ets_Toeic_Test_1/Ets_Toeic_Test_1.mp3",
-        "status": 0,
+        "status": 1,
         "questions": [
             {
                 "part": 1,

@@ -42,6 +42,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
 
             //examination
             Route::post('submit-examination', 'ExaminationController@submitExam');
+            Route::get('examination/toeic-exam-histories', 'ExaminationController@getToeicExamHistories');
 
             Route::prefix('backend')->middleware(['isAdmin'])->namespace('Admin')->group(function() {
                 Route::prefix('/users')->group(function(){
