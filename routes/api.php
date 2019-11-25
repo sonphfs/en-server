@@ -47,7 +47,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
             Route::prefix('backend')->middleware(['isAdmin'])->namespace('Admin')->group(function() {
                 Route::prefix('/users')->group(function(){
                     Route::get('/list', 'UserController@getUsers');
-                    Route::get('/create', 'UserController@create');
+                    Route::post('/create', 'UserController@create');
                     Route::get('/show/{id}', 'UserController@show');
                     Route::post('/update/{id}', 'UserController@update');
                     Route::post('/delete', 'UserController@delete');

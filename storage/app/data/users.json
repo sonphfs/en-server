@@ -5,6 +5,7 @@
     "password": "admin123",
     "phone": "0376863045",
     "address": "HN",
+    "gender": 1,
     "avatar": "enc/uploads/users/avatars/default-userAvatar.png",
     "birthday": "2019-10-29",
     "roles" : [
@@ -24,6 +25,7 @@
     "password": "admin123",
     "phone": "0376863045",
     "address": "HN",
+    "gender": 1,
     "avatar": "enc/uploads/users/avatars/default-userAvatar.png",
     "birthday": "2019-10-29",
     "roles" : [
@@ -38,6 +40,7 @@
     "email": "sonph1@gmail.com",
     "password": "admin123",
     "phone": "0376863045",
+    "gender": 1,
     "avatar": "enc/uploads/users/avatars/default-userAvatar.png",
     "address": "HN",
     "birthday": "2019-10-29",
