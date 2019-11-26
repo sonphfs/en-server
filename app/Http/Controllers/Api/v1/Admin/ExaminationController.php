@@ -20,6 +20,15 @@ class ExaminationController extends Controller
 
     public function getExaminations()
     {
+        $keyword = request()->keyword;
+        if(!empty($keyword)) {
+            $exams = Examination::with('examination_type')
+                ->where('code', 'LIKE', "%{$keyword}%")
+                ->orWhere('title', 'LIKE', "%{$keyword}%")
+                ->orWhere('description', 'LIKE', "%{$keyword}%")
+                ->paginate(self::PER_PAGE);
+                return $this->response($exams);
+        }
         return $this->response(Examination::with('examination_type')->paginate(self::PER_PAGE));
     }
 

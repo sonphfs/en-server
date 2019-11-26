@@ -12,7 +12,16 @@ class LearningWordController extends Controller
 
     public function getLearningWords()
     {
-
+        $keyword = request()->keyword;
+        if(!empty($keyword)) {
+            $learning_words = LearningWord::where('word', 'LIKE', "%{$keyword}%")
+                ->orWhere('type', 'LIKE', "%{$keyword}%")
+                ->orWhere('pronunciation', 'LIKE', "%{$keyword}%")
+                ->orWhere('meaning', 'LIKE', "%{$keyword}%")
+                ->orWhere('example', 'LIKE', "%{$keyword}%")
+                ->paginate(self::PER_PAGE);
+            return $this->response($learning_words);
+        }
         return $this->response(LearningWord::paginate(self::PER_PAGE));
     }
 
