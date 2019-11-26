@@ -92,6 +92,8 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::post('/update/{id}', 'SubjectController@update');
                     Route::post('/delete/{id}', 'SubjectController@delete');
                 });
+                Route::post('/files/upload', 'UploadFileController@uploadImage');
+                Route::post('/files/delete', 'UploadFileController@deleteFile');
             });
         });
         Route::middleware('jwt.refresh')->get('/token/refresh', 'AuthController@refresh');

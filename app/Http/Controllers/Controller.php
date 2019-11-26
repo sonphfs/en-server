@@ -13,6 +13,28 @@ class Controller extends BaseController
 
     const PER_PAGE = 10;
     const USER_AVATARS_FOLDER = 'enc/uploads/users/avatars/';
+    const USER_UPLOAD_IMAGES_FOLDER = 'enc/uploads/users/images/';
+
+    const FILE_AUDIO = 'AUDIO';
+    const FILE_IMAGE = 'IMAGE';
+
+    const EXAMINATION_UPLOAD_IMAGES_FOLDER = 'enc/uploads/examinations/images/';
+    const EXAMINATION_UPLOAD_AUDIOS_FOLDER = 'enc/uploads/examinations/audios/';
+
+    const QUESTION_UPLOAD_IMAGES_FOLDER = 'enc/uploads/questions/images/';
+    const QUESTION_UPLOAD_AUDIOS_FOLDER = 'enc/uploads/questions/audios/';
+
+    const WORD_UPLOAD_IMAGES_FOLDER = 'enc/uploads/words/images/';
+    const WORD_UPLOAD_AUDIOS_FOLDER = 'enc/uploads/words/audios/';
+
+    const SUBJECT_UPLOAD_IMAGES_FOLDER = 'enc/uploads/subjects/images/';
+
+    const QUESTION_OBJECT = 'QUESTION';
+    const EXAMINATION_OBJECT = 'EXAMINATION';
+    const LEARNING_WORD_OBJECT = 'LEARNING_WORD';
+    const SUBJECT_OBJECT = 'SUBJECT';
+    const USER_OBJECT = 'USER';
+    const AVATAR_OBJECT = 'USER_AVATAR';
 
     protected function response($data = [], $status = 200, $messages = '')
     {

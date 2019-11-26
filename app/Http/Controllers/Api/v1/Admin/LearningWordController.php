@@ -36,20 +36,8 @@ class LearningWordController extends Controller
             $learningWord->meaning = $requestData['meaning'];
             $learningWord->pronunciation = $requestData['pronunciation'];
             $learningWord->example = $requestData['example'];
-            if ($request->file('image')) {
-                $file = $request->file('image');
-                //Move Uploaded File
-                $destinationPath = 'uploads/learning_words/images';
-                $result = $file->move($destinationPath, $file->getFileName() . '.' . $file->getClientOriginalExtension());
-                $learningWord->image = $result->getPathName();
-            }
-            if ($request->file('audio')) {
-                $file = $request->file('audio');
-                //Move Uploaded File
-                $destinationPath = 'uploads/learning_words/audios';
-                $result = $file->move($destinationPath, $file->getFileName() . '.' . $file->getClientOriginalExtension());
-                $learningWord->audio = $result->getPathName();
-            }
+            $learningWord->image = $requestData['image'];
+            $learningWord->audio = $requestData['audio'];
             $result = $learningWord->save();
         } catch (\Exception $e) {
             return $this->response('Create Learning word failed!', 422);
