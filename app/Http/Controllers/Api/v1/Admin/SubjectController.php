@@ -10,6 +10,11 @@ class SubjectController extends Controller
 {
     public function getSubjects()
     {
+        $keyword = \request()->keyword;
+        if(!empty($keyword)) {
+            $subjects = Subject::where('name', 'LIKE', "%{$keyword}%")->orderBy('id', 'desc')->paginate(self::PER_PAGE);
+            return $this->response($subjects);
+        }
         return $this->response(Subject::paginate(self::PER_PAGE));
     }
 
@@ -19,16 +24,9 @@ class SubjectController extends Controller
         try {
             $subject = new Subject();
             $subject->name = $requestData['name'];
-            if ($request->hasFile('image')) {
-                $file = $request->file('image');
-                //Move Uploaded File
-                $destinationPath = 'uploads/subjects';
-                $result = $file->move($destinationPath, $file->getFileName() . '.' . $file->getClientOriginalExtension());
-                $subject->image = $result->getPathName();
-            }
+            $subject->image = $requestData['image'];
             $result = $subject->save();
         } catch (\Exception $e) {
-            return $this->response('Create subject failed!', 422);
         }
         return $this->response($result);
 
@@ -59,9 +57,11 @@ class SubjectController extends Controller
         return $this->response($result);
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
-        $result = Subject::find($id)->delete();
+        $id = $request->all()['id'];
+        $result = Subject::find($id);
+        $result->delete();
         return $this->response($result);
     }
 }

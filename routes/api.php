@@ -90,7 +90,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::post('/create', 'SubjectController@create');
                     Route::get('/show/{id}', 'SubjectController@show');
                     Route::post('/update/{id}', 'SubjectController@update');
-                    Route::post('/delete/{id}', 'SubjectController@delete');
+                    Route::post('/delete', 'SubjectController@delete');
                 });
                 Route::post('/files/upload', 'UploadFileController@uploadImage');
                 Route::post('/files/delete', 'UploadFileController@deleteFile');
