@@ -9,6 +9,18 @@
             {
                 "part": 1,
                 "parent_id": 0,
+                "no": 0,
+                "content": "",
+                "image": "https://enza.com.vn/toeic/image/sample/c-they-re-standing-near-the-table.jpg",
+                "answer_A": "The man is unlocking a door.",
+                "answer_B": "The man is holding some packages.",
+                "answer_C": "They're standing near the table,",
+                "answer_D": "The man is standing near some boxes.",
+                "correct_answer": "A"
+            },
+            {
+                "part": 1,
+                "parent_id": 0,
                 "no": 1,
                 "content": "",
                 "image": "http://www.flyhigh.edu.vn/uploads/imgBaiViet/061-1477292327.jpg",
@@ -16,6 +28,18 @@
                 "answer_B": "The man is holding some packages.",
                 "answer_C": "The man is loading a cart.",
                 "answer_D": "The man is standing near some boxes.",
+                "correct_answer": "A"
+            },
+            {
+                "part": 2,
+                "parent_id": 0,
+                "no": 0,
+                "content": "What are you doing?",
+                "image": "",
+                "answer_A": "I am doing fine.",
+                "answer_B": "I am looking for something.",
+                "answer_C": "I can't do it.",
+                "answer_D": "",
                 "correct_answer": "A"
             },
             {
