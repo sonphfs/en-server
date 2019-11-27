@@ -80,14 +80,14 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                 });
                 Route::prefix('/learning_words')->group(function(){
                     Route::get('/list', 'LearningWordController@getLearningWords');
-                    Route::post('/create', 'LearningWordController@create');
+                    Route::post('/create-or-update', 'LearningWordController@createOrUpdate');
                     Route::get('/show/{id}', 'LearningWordController@show');
                     Route::post('/update/{id}', 'LearningWordController@update');
-                    Route::post('/delete/{id}', 'LearningWordController@delete');
+                    Route::post('/delete', 'LearningWordController@delete');
                 });
                 Route::prefix('/subjects')->group(function(){
                     Route::get('/list', 'SubjectController@getSubjects');
-                    Route::post('/create', 'SubjectController@create');
+                    Route::post('/create-or-update', 'SubjectController@createOrUpdate');
                     Route::get('/show/{id}', 'SubjectController@show');
                     Route::post('/update/{id}', 'SubjectController@update');
                     Route::post('/delete', 'SubjectController@delete');

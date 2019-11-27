@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\v1\Admin;
 use App\Subject;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Helpers\FileHelper;
 
 class SubjectController extends Controller
 {
@@ -18,11 +19,15 @@ class SubjectController extends Controller
         return $this->response(Subject::paginate(self::PER_PAGE));
     }
 
-    public function create(Request $request)
+    public function createOrUpdate(Request $request)
     {
         $requestData = $request->all();
-        try {
+        if(isset($request->id)) {
+            $subject = Subject::find($request->id);
+        }else{
             $subject = new Subject();
+        }
+        try {
             $subject->name = $requestData['name'];
             $subject->image = $requestData['image'];
             $result = $subject->save();
@@ -60,8 +65,11 @@ class SubjectController extends Controller
     public function delete(Request $request)
     {
         $id = $request->all()['id'];
-        $result = Subject::find($id);
-        $result->delete();
-        return $this->response($result);
+        $subject = Subject::find($id);
+        if(!empty($subject->image)) {
+            FileHelper::deleteFile($subject->image);
+        }
+        $subject->delete();
+        return $this->response($subject);
     }
 }

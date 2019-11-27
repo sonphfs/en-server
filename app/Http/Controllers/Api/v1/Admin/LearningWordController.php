@@ -6,6 +6,7 @@ use App\LearningWord;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
+use App\Helpers\FileHelper;
 
 class LearningWordController extends Controller
 {
@@ -25,10 +26,14 @@ class LearningWordController extends Controller
         return $this->response(LearningWord::paginate(self::PER_PAGE));
     }
 
-    public function create(Request $request)
+    public function createOrUpdate(Request $request)
     {
         $requestData = $request->all();
-        $learningWord = new LearningWord();
+        if(isset($requestData['id'])) {
+            $learningWord = LearningWord::find($requestData['id']);
+        }else {
+            $learningWord = new LearningWord();
+        }
         try {
             $learningWord->subject_id = $requestData['subject_id'];
             $learningWord->word = $requestData['word'];
@@ -82,9 +87,17 @@ class LearningWordController extends Controller
         return $this->response($result);
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
-        $result = LearningWord::find($id)->delete();
-        return $this->response($result);
+        $id = $request->all()['id'];
+        $learningWord = LearningWord::find($id);
+        if(!empty($learningWord->image)) {
+            FileHelper::deleteFile($learningWord->image);
+        }
+        if(!empty($learningWord->audio)) {
+            FileHelper::deleteFile($learningWord->audio);
+        }
+        $learningWord->delete();
+        return $this->response($learningWord);
     }
 }
