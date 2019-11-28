@@ -32,22 +32,20 @@ class ExaminationController extends Controller
         return $this->response(Examination::with('examination_type')->paginate(self::PER_PAGE));
     }
 
-    public function create(Request $request)
+    public function createOrUpdate(Request $request)
     {
-        $exam = new Examination();
         $requestData = $request->all();
-        if ($request->file('audio')) {
-            $file = $request->file('audio');
-            //Move Uploaded File
-            $destinationPath = 'uploads/examinations/images';
-            $result = $file->move($destinationPath, $this->_generateRandomString() .'_'.$file->getClientOriginalName());
-            $exam->audio = $result->getPathName();
+        if(isset($requestData['code'])) {
+            $exam = Examination::where('code', $requestData['code'])->fisrt();
+        }else {
+            $exam = new Examination();
+            $exam->code = $this->_generateRandomString();
         }
         try {
             $exam->title = $requestData['title'];
+            $exam->audio = $requestData['audio'];
             $exam->description = $requestData['description'];
             $exam->type = $requestData['type'];
-            $exam->code = $this->_generateRandomString();
             $exam->status = 0;
             $exam->save();
             return $this->response($exam);

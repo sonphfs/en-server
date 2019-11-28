@@ -23,6 +23,9 @@ class QuestionHelper
             $questionObj->code = CommonHelper::generateRandomString();
         }
         $questionObj->part = $question['part'];
+        $questionObj->image = $question['image'];
+        $questionObj->content = $question['content'];
+        $questionObj->audio = $question['audio'];
         $questionObj->answer_A = $question['answer_A'];
         $questionObj->answer_B = $question['answer_B'];
         $questionObj->answer_C = $question['answer_C'];
