@@ -12,6 +12,13 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     const PER_PAGE = 10;
+
+    const SHORT_TEST_QUESTION_NUM = 20;
+
+    const SHORT_TEST = 1;
+    const FULL_TEST = 2;
+    const FULL_TEST_NEW_FORMAT = 3;
+
     const USER_AVATARS_FOLDER = 'enc/uploads/users/avatars/';
     const USER_UPLOAD_IMAGES_FOLDER = 'enc/uploads/users/images/';
 

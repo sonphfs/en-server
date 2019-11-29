@@ -42,7 +42,8 @@ class ExaminationController extends Controller
     public function submitExam(Request $request)
     {
         $exam = new ExaminationLog();
-        $requestData = $request->only(['examination_id', 'listening_questions', 'reading_questions']);
+        $requestData = $request->only(['examination_code', 'listening_questions', 'reading_questions']);
+        $exammination = Examination::where('code', $requestData['examination_code'])->first();
         $responseData = [];
         $readingCorrectNum = 0;
         $listeningCorrectNum = 0;
@@ -73,8 +74,12 @@ class ExaminationController extends Controller
         $listeningScore = ScoreConversion::where('num', $listeningCorrectNum)->first()['listening_score'];
         $user = Auth::user();
         $exam->user_id = $user->id;
-        $exam->examination_id = 1;
-        $exam->total_score = $readingScore + $listeningScore;
+        $exam->examination_id = $exammination->id;
+        if($exammination->type == self::SHORT_TEST) {
+            $exam->total_score = round(($listeningCorrectNum + $readingCorrectNum) / self::SHORT_TEST_QUESTION_NUM, 2);
+        }else {
+            $exam->total_score = $readingScore+ $listeningScore;
+        }
         $exam->save();
         $responseData['examination_log'][] = $exam;
         $requestData['questions'] = array_merge($requestData['listening_questions'], $requestData['reading_questions']);
@@ -91,9 +96,13 @@ class ExaminationController extends Controller
         return $this->response(['Logs' => $responseData, 'examination_log_id' => $exam->id]);
     }
 
-    public function getExaminationHistory()
+    public function getExaminationHistory($code)
     {
-        $examinationLogs = ExaminationLog::where('examination_id', 1)->get();
+        $exam = Examination::where('code', $code)->first();
+        $user = Auth::user();
+        $examinationLogs = ExaminationLog::where('examination_id', $exam->id)
+            ->where('user_id', $user->id)
+            ->get();
         return $this->response(['Logs' => $examinationLogs]);
     }
 

@@ -11,9 +11,9 @@ class ExaminationLogController extends Controller
 {
     public function getExaminationResult($id)
     {
-        $examinationLog = ExaminationLog::find($id)->load('questions', 'examinations');
+        $examinationLog = ExaminationLog::find($id)->load('questions', 'examination');
         $questionLogs = $examinationLog->questions;
-        $examinationInfo = $examinationLog->examinations;
+        $examinationInfo = $examinationLog->examination;
         $correctAnswerCount = [];
         $correctAnswerCount['part_1'] = 0;
         $correctAnswerCount['part_2'] = 0;
@@ -51,14 +51,13 @@ class ExaminationLogController extends Controller
                     case 7:
                         $correctAnswerCount['part_7']++;
                         break;
-
                 }
             }
         }
         $readingCorrectAnswer = $correctAnswerCount['part_5'] + $correctAnswerCount['part_6'] + $correctAnswerCount['part_7'];
         $listeningCorrectAnswer = $correctAnswerCount['part_1'] + $correctAnswerCount['part_2'] + $correctAnswerCount['part_3'] + $correctAnswerCount['part_4'];
-        $listeningScore = ScoreConversion::where('num', $listeningCorrectAnswer)->get('listening_score')->first()->listening_score;
-        $readingScore = ScoreConversion::where('num', $readingCorrectAnswer)->get('reading_score')->first()->reading_score;
+        $listeningScore = ScoreConversion::where('num', '<=', $listeningCorrectAnswer)->orderBy('num', 'DESC')->limit(1)->get('listening_score')->first()->listening_score;
+        $readingScore = ScoreConversion::where('num','<=', $listeningCorrectAnswer)->orderBy('num', 'DESC')->limit(1)->get('reading_score')->first()->reading_score;
         $examinationResult = [
             'correct_answer_count' => $correctAnswerCount,
             'reading_score' => $readingScore,

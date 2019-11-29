@@ -27,7 +27,6 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         Route::get('send', 'ContactController@sendMail');
         Route::post('signup', 'AuthController@register');
         Route::post('login', 'AuthController@login');
-        Route::get('exam-log', 'ExaminationController@getExaminationHistory');
         Route::get('examination-result/{id}', 'ExaminationLogController@getExaminationResult');
         //subject
         Route::get('/subjects', 'SubjectController@getSubjects');
@@ -43,6 +42,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
             //examination
             Route::post('submit-examination', 'ExaminationController@submitExam');
             Route::get('examination/toeic-exam-histories', 'ExaminationController@getToeicExamHistories');
+            Route::get('exam-log/{id}', 'ExaminationController@getExaminationHistory');
 
             Route::prefix('backend')->middleware(['isAdmin'])->namespace('Admin')->group(function() {
                 Route::prefix('/users')->group(function(){
