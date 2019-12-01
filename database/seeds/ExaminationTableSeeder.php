@@ -28,7 +28,6 @@ class ExaminationTableSeeder extends Seeder
             $exam->title = $item->title;
             $exam->type = $item->type;
             $exam->description = $item->description;
-            $exam->audio = $item->audio;
             $exam->status = $item->status;
             $exam->save();
             foreach ($item->questions as $question) {

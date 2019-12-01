@@ -47,9 +47,11 @@ class UnitController extends Controller
         return $this->response($result);
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
-        $result = Unit::find($id)->delete();
-        return $this->response($result);
+        $id = $request->all()['id'];
+        $unit = Unit::find($id);
+        $unit->delete();
+        return $this->response($unit);
     }
 }

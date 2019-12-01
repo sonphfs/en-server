@@ -36,7 +36,7 @@ class ExaminationController extends Controller
     {
         $requestData = $request->all();
         if(isset($requestData['code'])) {
-            $exam = Examination::where('code', $requestData['code'])->fisrt();
+            $exam = Examination::where('code', $requestData['code'])->first();
         }else {
             $exam = new Examination();
             $exam->code = $this->_generateRandomString();

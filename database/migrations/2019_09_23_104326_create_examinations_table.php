@@ -19,7 +19,7 @@ class CreateExaminationsTable extends Migration
             $table->string('title');
             $table->unsignedInteger('type');
             $table->string('description');
-            $table->string('audio')->nullable();
+            $table->string('audio')->default('enc/uploads/examinations/audios/deault_test_audio.mp3')->nullable();
             $table->integer('status')->nullable();
             $table->string('user_id')->nullable(true);
             $table->timestamps();

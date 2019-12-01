@@ -29,7 +29,6 @@ class LearningWordsTableSeeder extends Seeder
             $word->meaning = $item->meaning;
             $word->pronunciation = "pronuncitation+".$key ;
             $word->audio = "audio+".$key;
-            $word->image = "image+".$key;
             $word->example = "example+".$key;
             $word->save();
         }
