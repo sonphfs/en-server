@@ -31,7 +31,7 @@ class LessonController extends Controller
             }
             $lesson->save();
         } catch (\Exception $e) {
-            return $this->response('Create lesson failed!', 422);
+            return $this->response($e, 422);
         }
         return $this->response($requestData);
     }

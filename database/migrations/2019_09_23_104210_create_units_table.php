@@ -17,6 +17,7 @@ class CreateUnitsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('parent_id');
             $table->string('name');
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
