@@ -27,7 +27,7 @@ class CreateQuestionsTable extends Migration
             $table->string('answer_B')->nullable(true);
             $table->string('answer_C')->nullable(true);
             $table->string('answer_D')->nullable(true);
-            $table->string('correct_answer');
+            $table->string('correct_answer')->nullable(true);
             $table->unsignedInteger('word_id')->nullable(true);
             $table->unsignedInteger('lesson_id')->nullable(true);
             $table->timestamps();

@@ -21,7 +21,7 @@ class CreateLearningWordsTable extends Migration
             $table->string('meaning');
             $table->string('pronunciation');
             $table->string('audio')->nullable();
-            $table->string('image')->nullable();
+            $table->string('image')->default('enc/uploads/default_image.jpg')->nullable();
             $table->string('example');
             $table->timestamps();
             $table->softDeletes();

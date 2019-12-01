@@ -93,7 +93,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::post('/delete', 'SubjectController@delete');
                 });
                 Route::prefix('/questions')->group(function(){
-                    Route::get('/list', 'QuestionController@getQuestion');
+                    Route::get('/list', 'QuestionController@getQuestions');
                     Route::post('/create-or-update', 'QuestionController@createOrUpdate');
                     Route::get('/show/{id}', 'QuestionController@show');
                     Route::post('/update/{id}', 'QuestionController@update');
