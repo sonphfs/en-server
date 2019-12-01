@@ -17,7 +17,7 @@ class CreateLessonsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('unit_id');
             $table->string('title');
-            $table->string('image');
+            $table->string('image')->default('enc/uploads/default_image.jpg');
             $table->timestamps();
             $table->softDeletes();
         });
