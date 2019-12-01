@@ -16,5 +16,5 @@ class Question extends Model
      *
      * @var array
      */
-    protected $fillable = ['part', 'no', 'content', 'image', 'data','paragraph','content','answer_A','answer_B','answer_C','answer_D','correct_answer',];
+    protected $fillable = ['part', 'parent_id', 'no', 'content', 'image', 'data','paragraph','content','answer_A','answer_B','answer_C','answer_D','correct_answer',];
 }

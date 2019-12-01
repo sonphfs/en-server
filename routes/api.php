@@ -92,6 +92,13 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::post('/update/{id}', 'SubjectController@update');
                     Route::post('/delete', 'SubjectController@delete');
                 });
+                Route::prefix('/questions')->group(function(){
+                    Route::get('/list', 'QuestionController@getQuestions');
+                    Route::post('/create-or-update', 'QuestionController@createOrUpdate');
+                    Route::get('/show/{id}', 'QuestionController@show');
+                    Route::post('/update/{id}', 'QuestionController@update');
+                    Route::post('/delete', 'QuestionController@delete');
+                });
                 Route::post('/files/upload', 'UploadFileController@uploadImage');
                 Route::post('/files/delete', 'UploadFileController@deleteFile');
             });

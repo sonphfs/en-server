@@ -78,8 +78,12 @@ class ExaminationController extends Controller
         $exam = Examination::where('code', $requestData['code'])->first();
         if(!empty($exam)) {
             foreach ($questions as $question) {
-                $questionObj = QuestionHelper::createOrUpdateQuestion($question);
-                QuestionHelper::updatePivotData($exam->id, $questionObj->id);
+                if(isset($question['isParent'])&& $question['isParent']==true ) {
+                    $paragraph = QuestionHelper::createOrUpdateParagraph($exam, $question);
+                }else{
+                    $questionObj = QuestionHelper::createOrUpdateQuestion($question);
+                    QuestionHelper::updatePivotData($exam->id, $questionObj->id);
+                }
             }
         }
         return $this->response($questions);
