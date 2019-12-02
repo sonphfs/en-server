@@ -7,9 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-    <!-- Bootstrap CSS -->
-    {{--
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
 </head>
 
 <body class="text-center">
@@ -52,56 +49,56 @@
                                 <p><span style="color:#000000"><span
                                                 style="font-family:Arial,Helvetica,sans-serif"><span
                                                     style="font-size:14px">
-                                                    Bài thi: {{ $examinationResult->examination->title }}
+                                                    Bài thi: {{ $examinationResult['examination']->title }}
                                             </span></span>
                                             </span>
                                 </p>
                                 <p><span style="color:#000000"><span
                                                 style="font-family:Arial,Helvetica,sans-serif"><span
                                                     style="font-size:14px">
-                                                    Mã đề: {{ $examinationResult->examination->code }}
+                                                    Mã đề: {{ $examinationResult['examination']->code }}
                                             </span></span>
                                             </span>
                                 </p>
                                 <p><span style="color:#000000"><span
                                                 style="font-family:Arial,Helvetica,sans-serif"><span
                                                     style="font-size:14px">
-                                                    Số câu đúng:
+                                                    Số câu đúng: {{ $examinationResult['total_correct'] }}
                                             </span></span>
                                             </span>
                                 </p>
                                 <p><span style="color:#000000"><span
                                                 style="font-family:Arial,Helvetica,sans-serif"><span
                                                     style="font-size:14px">
-                                                    Số câu sai:
+                                                    Số câu sai: {{ $examinationResult['total_incorrect'] }}
                                             </span></span>
                                             </span>
                                 </p>
                                 <p><span style="color:#000000"><span
                                                 style="font-family:Arial,Helvetica,sans-serif"><span
                                                     style="font-size:14px">
-                                                    Số câu chưa chọn:
+                                                    Số câu chưa chọn: {{ $examinationResult['not_selected'] }}
                                             </span></span>
                                             </span>
                                 </p>
                                 <p><span style="color:#000000"><span
                                                 style="font-family:Arial,Helvetica,sans-serif"><span
                                                     style="font-size:14px">
-                                                    Điểm nghe:
+                                                    Điểm nghe: {{ $examinationResult['listening_score'] }}
                                             </span></span>
                                             </span>
                                 </p>
                                 <p><span style="color:#000000"><span
                                                 style="font-family:Arial,Helvetica,sans-serif"><span
                                                     style="font-size:14px">
-                                                    Điểm đọc:
+                                                    Điểm đọc: {{ $examinationResult['reading_score'] }}
                                             </span></span>
                                             </span>
                                 </p>
                                 <p><span style="color:#000000"><span
                                                 style="font-family:Arial,Helvetica,sans-serif"><span
                                                     style="font-size:14px">
-                                                    Tổng điểm: {{ $examinationResult->total_score }}
+                                                    Tổng điểm: {{ $examinationResult['listening_score'] + $examinationResult['reading_score'] }}
                                             </span></span>
                                             </span>
                                 </p>

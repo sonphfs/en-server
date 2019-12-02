@@ -8,6 +8,10 @@ use App\Http\Controllers\Controller;
 
 class UnitController extends Controller
 {
+    public function getAll(){
+        return $this->response(Unit::all());
+    }
+
     public function getUnits()
     {
         return $this->response(Unit::paginate(self::PER_PAGE));

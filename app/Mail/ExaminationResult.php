@@ -19,7 +19,7 @@ class ExaminationResult extends Mailable
      *
      * @return void
      */
-    public function __construct(ExaminationLog $examinationResult)
+    public function __construct($examinationResult)
     {
         $this->examinationResult = $examinationResult;
     }

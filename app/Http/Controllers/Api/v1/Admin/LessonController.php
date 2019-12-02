@@ -9,6 +9,9 @@ use App\Http\Controllers\Controller;
 class LessonController extends Controller
 {
 
+    public function getListByUnitId($unitId){
+        return $this->response(Lesson::where('unit_id', $unitId)->get());
+    }
 
     public function getLessons()
     {
@@ -62,9 +65,11 @@ class LessonController extends Controller
         return $this->response($requestData);
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
-        $result = Lesson::findOrFail($id);
-        return $this->response($result);
+        $id = $request->all()['id'];
+        $lesson = Lesson::find($id);
+        $lesson->delete();
+        return $this->response($lesson);
     }
 }

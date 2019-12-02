@@ -10,6 +10,11 @@ use App\Helpers\FileHelper;
 
 class LearningWordController extends Controller
 {
+    public function getListBySubjectId($subjectId)
+    {
+        $words = LearningWord::where('subject_id', $subjectId)->get();
+        return $this->response($words);
+    }
 
     public function getLearningWords()
     {

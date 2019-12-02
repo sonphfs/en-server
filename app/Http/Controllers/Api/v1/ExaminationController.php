@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\v1;
 use App\Examination;
 use App\ExaminationLog;
 use App\ExaminationType;
+use App\Helpers\ExaminationLogHelper;
 use App\Mail\ExaminationResult;
 use App\Question;
 use App\QuestionLog;
@@ -91,7 +92,8 @@ class ExaminationController extends Controller
             $questionLog->save();
             $responseData['question_logs'][] = $questionLog;
         }
-        $examLog = ExaminationLog::where('id', $exam->id)->first()->load('examination','examination.examination_type');
+//        $examLog = ExaminationLog::where('id', $exam->id)->first()->load('examination','examination.examination_type');
+        $examLog = ExaminationLogHelper::getDetailExaminationResult($exam->id);
         Mail::to($user)->send(new ExaminationResult($examLog));
         return $this->response(['Logs' => $responseData, 'examination_log_id' => $exam->id]);
     }

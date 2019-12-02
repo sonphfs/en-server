@@ -11,6 +11,15 @@ class QuestionController extends Controller
     public function getQuestions()
     {
         $keyword = \request()->keyword;
+        $wordId = \request()->word_id;
+        $lessonId = \request()->lesson_id;
+        $searchConditions = [];
+        if(!empty($wordId)) {
+            $searchConditions['word_id'] = $wordId;
+        }
+        if(!empty($lessonId)) {
+            $searchConditions['lesson_id'] = $lessonId;
+        }
         if(!empty($keyword)) {
             $subjects = Question::where('code', 'LIKE', "%{$keyword}%")
                 ->orWhere('content', 'LIKE', "%{$keyword}%")
@@ -20,6 +29,7 @@ class QuestionController extends Controller
                 ->orWhere('answer_D', 'LIKE', "%{$keyword}%")
                 ->orWhere('correct_answer', 'LIKE', "%{$keyword}%")
                 ->orWhere('created_at', 'LIKE', "%{$keyword}%")
+                ->where($searchConditions)
                 ->paginate(self::PER_PAGE);
             return $this->response($subjects);
         }

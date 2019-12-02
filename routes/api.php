@@ -66,26 +66,30 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                 });
                 Route::prefix('lessons')->group(function(){
                     Route::get('/list', 'LessonController@getLessons');
+                    Route::get('/list-by-unit-id/{unitId}', 'LessonController@getListByUnitId');
                     Route::post('/create', 'LessonController@create');
                     Route::get('/show/{id}', 'LessonController@show');
                     Route::post('/update/{id}', 'LessonController@update');
-                    Route::get('/delete/{id}', 'LessonController@delete');
+                    Route::post('/delete', 'LessonController@delete');
                 });
                 Route::prefix('units')->group(function(){
+                    Route::get('/all', 'UnitController@getAll');
                     Route::get('/list', 'UnitController@getUnits');
                     Route::post('/create', 'UnitController@create');
                     Route::get('/show/{id}', 'UnitController@show');
                     Route::post('/update/{id}', 'UnitController@update');
-                    Route::get('/delete/{id}', 'UnitController@delete');
+                    Route::post('/delete', 'UnitController@delete');
                 });
                 Route::prefix('/learning_words')->group(function(){
                     Route::get('/list', 'LearningWordController@getLearningWords');
+                    Route::get('/examination-result/{subjectId}', 'LearningWordController@getListBySubjectId');
                     Route::post('/create-or-update', 'LearningWordController@createOrUpdate');
                     Route::get('/show/{id}', 'LearningWordController@show');
                     Route::post('/update/{id}', 'LearningWordController@update');
                     Route::post('/delete', 'LearningWordController@delete');
                 });
                 Route::prefix('/subjects')->group(function(){
+                    Route::get('/all', 'SubjectController@getAll');
                     Route::get('/list', 'SubjectController@getSubjects');
                     Route::post('/create-or-update', 'SubjectController@createOrUpdate');
                     Route::get('/show/{id}', 'SubjectController@show');

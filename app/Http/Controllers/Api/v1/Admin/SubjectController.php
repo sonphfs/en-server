@@ -9,6 +9,10 @@ use App\Helpers\FileHelper;
 
 class SubjectController extends Controller
 {
+    public function getAll(){
+        return $this->response(Subject::all());
+    }
+
     public function getSubjects()
     {
         $keyword = \request()->keyword;
