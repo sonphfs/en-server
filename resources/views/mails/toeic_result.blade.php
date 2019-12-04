@@ -77,13 +77,6 @@
                                 <p><span style="color:#000000"><span
                                                 style="font-family:Arial,Helvetica,sans-serif"><span
                                                     style="font-size:14px">
-                                                    Số câu chưa chọn: {{ $examinationResult['not_selected'] }}
-                                            </span></span>
-                                            </span>
-                                </p>
-                                <p><span style="color:#000000"><span
-                                                style="font-family:Arial,Helvetica,sans-serif"><span
-                                                    style="font-size:14px">
                                                     Điểm nghe: {{ $examinationResult['listening_score'] }}
                                             </span></span>
                                             </span>
