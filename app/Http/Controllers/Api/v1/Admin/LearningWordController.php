@@ -50,7 +50,6 @@ class LearningWordController extends Controller
             $learningWord->audio = $requestData['audio'];
             $result = $learningWord->save();
         } catch (\Exception $e) {
-            return $this->response('Create Learning word failed!', 422);
         }
         return $this->response($result);
     }

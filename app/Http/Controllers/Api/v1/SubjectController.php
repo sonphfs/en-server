@@ -10,7 +10,8 @@ class SubjectController extends Controller
 {
     public function getSubjects()
     {
-        return $this->response(Subject::all());
+        $perPage = 9;
+        return $this->response(Subject::paginate($perPage));
     }
 
 }

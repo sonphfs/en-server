@@ -20,7 +20,7 @@ class QuestionController extends Controller
         if(!empty($lessonId)) {
             $searchConditions['lesson_id'] = $lessonId;
         }
-        if(!empty($keyword)) {
+        if(!empty($keyword) || !empty($searchConditions)) {
             $subjects = Question::where('code', 'LIKE', "%{$keyword}%")
                 ->orWhere('content', 'LIKE', "%{$keyword}%")
                 ->orWhere('answer_A', 'LIKE', "%{$keyword}%")

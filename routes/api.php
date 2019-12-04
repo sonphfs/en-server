@@ -82,7 +82,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                 });
                 Route::prefix('/learning_words')->group(function(){
                     Route::get('/list', 'LearningWordController@getLearningWords');
-                    Route::get('/examination-result/{subjectId}', 'LearningWordController@getListBySubjectId');
+                    Route::get('/list-by-subject-id/{subjectId}', 'LearningWordController@getListBySubjectId');
                     Route::post('/create-or-update', 'LearningWordController@createOrUpdate');
                     Route::get('/show/{id}', 'LearningWordController@show');
                     Route::post('/update/{id}', 'LearningWordController@update');
