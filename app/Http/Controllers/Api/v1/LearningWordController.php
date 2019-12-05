@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Api\v1;
 
+use App\Examination;
+use App\ExaminationQuestion;
 use App\LearningWord;
+use App\Question;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class LearningWordController extends Controller
 {
@@ -88,9 +91,41 @@ class LearningWordController extends Controller
         return $this->response($result);
     }
 
+    public function test($subjectId)
+    {
+        try{
+            $wordId = LearningWord::where('subject_id', 1)->get('id');
+            $questions = Question::whereIn('word_id', $wordId)->distinct('word_id')->limit(10)->get();
+            $exam = $this->_createExamination($questions);
+            return $this->response($exam->load('questions'));
+        }catch (\Exception $e){
+
+        }
+    }
+
     public function delete($id)
     {
         $result = LearningWord::find($id)->delete();
         return $this->response($result);
+    }
+
+
+    private function _createExamination($questions)
+    {
+        $exam = new Examination();
+        $exam->user_id = Auth::user()->id;
+        $exam->code = $this->_generateRandomString();
+        $exam->title = 'TEST VOCABUNARY';
+        $exam->type = 5;
+        $exam->description = 'TEST VOCABUNARY';
+        $exam->status = 1;
+        $exam->save();
+        foreach ($questions as $question) {
+            $examinationQuestion = new ExaminationQuestion();
+            $examinationQuestion->examination_id = $exam->id;
+            $examinationQuestion->question_id = $question->id;
+            $examinationQuestion->save();
+        }
+        return $exam;
     }
 }

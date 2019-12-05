@@ -38,6 +38,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
             Route::post('/user/update-profile', 'UserController@updateProfile');
             Route::post('/user/change-password', 'UserController@changePassword');
             Route::post('logout', 'AuthController@logout');
+            Route::get('test/{subjectId}', 'LearningWordController@test');
 
             //examination
             Route::post('submit-examination', 'ExaminationController@submitExam');
