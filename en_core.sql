@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2019 at 06:10 PM
+-- Generation Time: Dec 11, 2019 at 06:04 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.2.18
 
@@ -66,7 +66,8 @@ CREATE TABLE `examinations` (
 --
 
 INSERT INTO `examinations` (`id`, `code`, `title`, `type`, `description`, `audio`, `status`, `user_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'c4VuwBTr', 'BÀI THI 12/10/1019', 2, 'Bài thi rút gọn', 'enc/uploads/examinations/audios/deault_test_audio.mp3', 1, NULL, '2019-12-04 08:52:11', '2019-12-04 08:52:11', NULL);
+(1, 'c4VuwBTr', 'BÀI THI 12/10/1019', 2, 'Bài thi rút gọn', 'enc/uploads/examinations/audios/deault_test_audio.mp3', 1, NULL, '2019-12-04 08:52:11', '2019-12-04 08:52:11', NULL),
+(2, '6pgaDgpC', 'ETS 2019 TEST 1', 3, 'ETS', 'enc/uploads/examinations/audios\\php51B5.tmp.mp3', 0, NULL, '2019-12-10 08:13:10', '2019-12-10 08:13:10', NULL);
 
 -- --------------------------------------------------------
 
@@ -125,7 +126,66 @@ INSERT INTO `examination_questions` (`id`, `examination_id`, `question_id`, `cre
 (21, 1, 21, '2019-12-04 08:52:11', '2019-12-04 08:52:11'),
 (22, 1, 22, '2019-12-04 08:52:11', '2019-12-04 08:52:11'),
 (23, 1, 23, '2019-12-04 08:52:11', '2019-12-04 08:52:11'),
-(24, 1, 24, '2019-12-04 08:52:11', '2019-12-04 08:52:11');
+(24, 1, 24, '2019-12-04 08:52:11', '2019-12-04 08:52:11'),
+(25, 2, 25, '2019-12-10 08:22:31', '2019-12-10 08:22:31'),
+(26, 2, 26, '2019-12-10 08:26:53', '2019-12-10 08:26:53'),
+(27, 2, 27, '2019-12-10 08:26:53', '2019-12-10 08:26:53'),
+(28, 2, 28, '2019-12-10 08:26:53', '2019-12-10 08:26:53'),
+(29, 2, 29, '2019-12-10 08:26:53', '2019-12-10 08:26:53'),
+(30, 2, 30, '2019-12-10 08:26:53', '2019-12-10 08:26:53'),
+(31, 2, 31, '2019-12-10 08:26:53', '2019-12-10 08:26:53'),
+(32, 2, 32, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(33, 2, 33, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(34, 2, 34, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(35, 2, 35, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(36, 2, 36, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(37, 2, 37, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(38, 2, 38, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(39, 2, 39, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(40, 2, 40, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(41, 2, 41, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(42, 2, 42, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(43, 2, 43, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(44, 2, 44, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(45, 2, 45, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(46, 2, 46, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(47, 2, 47, '2019-12-10 08:44:45', '2019-12-10 08:44:45'),
+(48, 2, 48, '2019-12-10 08:49:24', '2019-12-10 08:49:24'),
+(49, 2, 49, '2019-12-10 08:50:00', '2019-12-10 08:50:00'),
+(50, 2, 50, '2019-12-10 08:50:26', '2019-12-10 08:50:26'),
+(51, 2, 51, '2019-12-10 08:50:26', '2019-12-10 08:50:26'),
+(52, 2, 52, '2019-12-10 08:53:01', '2019-12-10 08:53:01'),
+(53, 2, 53, '2019-12-10 08:53:01', '2019-12-10 08:53:01'),
+(54, 2, 54, '2019-12-10 08:53:01', '2019-12-10 08:53:01'),
+(55, 2, 55, '2019-12-10 08:53:01', '2019-12-10 08:53:01'),
+(56, 2, 56, '2019-12-10 08:53:01', '2019-12-10 08:53:01'),
+(57, 2, 57, '2019-12-10 08:53:01', '2019-12-10 08:53:01'),
+(58, 2, 58, '2019-12-10 08:53:01', '2019-12-10 08:53:01'),
+(59, 2, 59, '2019-12-10 08:53:01', '2019-12-10 08:53:01'),
+(60, 2, 60, '2019-12-10 08:55:16', '2019-12-10 08:55:16'),
+(61, 2, 61, '2019-12-10 08:55:16', '2019-12-10 08:55:16'),
+(62, 2, 62, '2019-12-10 08:55:16', '2019-12-10 08:55:16'),
+(63, 2, 63, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(64, 2, 64, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(65, 2, 65, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(66, 2, 66, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(67, 2, 67, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(68, 2, 68, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(69, 2, 69, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(70, 2, 70, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(71, 2, 71, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(72, 2, 72, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(73, 2, 73, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(74, 2, 74, '2019-12-10 08:58:33', '2019-12-10 08:58:33'),
+(75, 2, 75, '2019-12-10 09:33:14', '2019-12-10 09:33:14'),
+(76, 2, 76, '2019-12-10 09:39:51', '2019-12-10 09:39:51'),
+(77, 2, 77, '2019-12-10 09:39:51', '2019-12-10 09:39:51'),
+(78, 2, 78, '2019-12-10 09:39:51', '2019-12-10 09:39:51'),
+(79, 2, 79, '2019-12-10 09:39:51', '2019-12-10 09:39:51'),
+(80, 2, 80, '2019-12-10 09:39:51', '2019-12-10 09:39:51'),
+(81, 2, 81, '2019-12-10 09:43:24', '2019-12-10 09:43:24'),
+(82, 2, 82, '2019-12-10 09:43:24', '2019-12-10 09:43:24'),
+(83, 2, 83, '2019-12-10 09:43:24', '2019-12-10 09:43:24');
 
 -- --------------------------------------------------------
 
@@ -330,7 +390,10 @@ CREATE TABLE `login_histories` (
 --
 
 INSERT INTO `login_histories` (`id`, `user_id`, `ip_address`, `device`, `created_at`, `updated_at`) VALUES
-(1, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36', '2019-12-04 08:52:20', '2019-12-04 08:52:20');
+(1, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36', '2019-12-04 08:52:20', '2019-12-04 08:52:20'),
+(2, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36', '2019-12-10 08:09:13', '2019-12-10 08:09:13'),
+(3, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36', '2019-12-10 08:30:53', '2019-12-10 08:30:53'),
+(4, 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36', '2019-12-10 09:32:02', '2019-12-10 09:32:02');
 
 -- --------------------------------------------------------
 
@@ -454,7 +517,60 @@ INSERT INTO `questions` (`id`, `parent_id`, `code`, `part`, `no`, `paragraph`, `
 (21, 0, 'lIoLMoBZ', 7, 0, '<span class=\"paragraph-sentence\">Hochstein to Be Headed by <br></span>\n<span class=\"paragraph-sentence\">Barrault Bondy Executive</span></p>\n<p class=\"reading-text-paragraph\" style=\"text-align:center;text-align: center;\"><span class=\"paragraph-sentence\">February 10 - <span class=\"q173-1\">Recent movement of executives</span> among the fashion industry\'s leading companies appears not to be ending anytime soon.</span>\n<span class=\"paragraph-sentence\">Hochstein Shoes, Inc. , Swiss-based retailer and manufacturer of men\'s shoes, announced today that its chief executive officer, Gerard Hullot, will retire,</span>\n<span class=\"paragraph-sentence\">and that Angelica Ferrara, current executive vice-president of Barrault Bondy, will take his place.</span></p>\n<p class=\"reading-text-paragraph\" style=\"text-align:center;text-align: center;\"><span class=\"paragraph-sentence\">Experts say the succession represents a major upset within the industry, since Barrault Bondy, the Paris-based manufacturer, is one of Hochstein\'s leading competitors in the high-end shoe market.</span></p>\n<p class=\"reading-text-paragraph\" style=\"text-align:center;text-align: center;\"><span class=\"paragraph-sentence\">Hullot\'s departure come as little surprise, however.</span>\n<span class=\"paragraph-sentence\">He had publicly indicated his desire to retire in order to write a memoir of his long career in fashion, <span class=\"q174-1\">over thirty years of which were spent at Hochstein</span>.</span>\n<span class=\"paragraph-sentence\">Nevertheless, most experts had expected him to stay on until after November, when the company\'s winter collection is released.</span></p>\n<p class=\"reading-text-paragraph\" style=\"text-align:center;text-align: center;\"><span class=\"paragraph-sentence\">Ferrara\'s move has generated much speculation about who will take her place at Barrault Bondy.</span>\n<span class=\"paragraph-sentence\">Sources there indicate that current design director Marcel Hugo will be named the new executive vice president in a press release later this week.</span></p>', 'Questions 18-20: refer to the following article.', '', NULL, '', '', '', '', '', NULL, NULL, '2019-12-04 08:52:11', '2019-12-04 08:52:11', NULL),
 (22, 21, 'jGwvuglm', 7, 18, NULL, 'What is the main topic of the article?', '', NULL, 'The retirement of a once successful product line.', 'A change within the leadership of two companies.', 'One company\'s purchase of a competitor.', 'Recent growth within the fashion industry.', 'B', NULL, NULL, '2019-12-04 08:52:11', '2019-12-04 08:52:11', NULL),
 (23, 21, 'qJNeOTnu', 7, 19, NULL, 'How does the article describe Mr. Hullot?', '', NULL, 'He has written several books on fashion.', 'He personally designed the winter collection.', 'He is upset about competition from Barrault Bondy.', 'He has spent much of his career at Hochstein.', 'B', NULL, NULL, '2019-12-04 08:52:11', '2019-12-04 08:52:11', NULL),
-(24, 21, '1FUy6quV', 7, 20, NULL, 'According to the article, what will probably happen later this week?', '', NULL, 'Barrault Bondy will make an official announcement.', 'Hochstein will release its winter collection.', 'Mr. Hugo will replace Ms. Ferrara\'s designs with his own.', 'Ms. Ferrara will announce new sources for shoe materials.', 'B', NULL, NULL, '2019-12-04 08:52:11', '2019-12-04 08:52:11', NULL);
+(24, 21, '1FUy6quV', 7, 20, NULL, 'According to the article, what will probably happen later this week?', '', NULL, 'Barrault Bondy will make an official announcement.', 'Hochstein will release its winter collection.', 'Mr. Hugo will replace Ms. Ferrara\'s designs with his own.', 'Ms. Ferrara will announce new sources for shoe materials.', 'B', NULL, NULL, '2019-12-04 08:52:11', '2019-12-04 08:52:11', NULL),
+(25, 0, 'oHEdq00M', 1, 0, NULL, NULL, 'enc/uploads/examinations/images\\phpF172.tmp.png', NULL, 'The man is opening some curtains.', 'The man is opening some curtains.', 'The man is opening some curtains.', 'The man is opening some curtains.', 'A', NULL, NULL, '2019-12-10 08:22:31', '2019-12-10 08:31:52', NULL),
+(26, 0, 'PyDru5WF', 1, 1, NULL, NULL, 'enc/uploads/examinations/images\\phpFFFA.tmp.png', NULL, 'She\'s searching in her handbag.', 'She\'s looking in a display case.', 'She\'s paying for a purchase.', 'She\'s holding some flowers.', 'A', NULL, NULL, '2019-12-10 08:26:53', '2019-12-10 08:31:52', NULL),
+(27, 0, 'B2xh9b8o', 1, 2, NULL, NULL, 'enc/uploads/examinations/images\\phpC01.tmp.png', NULL, 'The man is switching off a lamp.', 'The man is opening some curtains.', 'The man is seated by a window.', 'The man is hanging some photographs on the wall.', 'A', NULL, NULL, '2019-12-10 08:26:53', '2019-12-10 08:31:52', NULL),
+(28, 0, 'bTaClwPK', 1, 3, NULL, NULL, 'enc/uploads/examinations/images\\php19EC.tmp.png', NULL, 'Some chairs are arranged in a circle.', 'Some stairs are being cleaned.', 'A roof is being repaired.', 'A tree is being trimmed.', 'A', NULL, NULL, '2019-12-10 08:26:53', '2019-12-10 08:31:52', NULL),
+(29, 0, 'qtw3qHwb', 1, 4, NULL, NULL, 'enc/uploads/examinations/images\\php2920.tmp.png', NULL, 'One of the women is wearing a scarf', 'The women are talking to each other.', 'The man is pouring coffee into a cup.', 'The people are closing their menus.', 'A', NULL, NULL, '2019-12-10 08:26:53', '2019-12-10 08:31:52', NULL),
+(30, 0, '0bCQgNDM', 1, 5, NULL, NULL, 'enc/uploads/examinations/images\\php3798.tmp.png', NULL, 'A notice is being hung on a post.', 'The women are walking toward a doorway.', 'The man is changing a bicycle tire.', 'A basket is being removed from a cart.', 'A', NULL, NULL, '2019-12-10 08:26:53', '2019-12-10 08:31:52', NULL),
+(31, 0, 'aPNP6Rsn', 1, 6, NULL, NULL, 'enc/uploads/examinations/images\\php4843.tmp.png', NULL, 'A shop assistant is giving a man some money.', 'Some people are entering a supermarket.', 'A cashier is putting merchandise into a bag.', 'Some customers are waiting in line.', 'A', NULL, NULL, '2019-12-10 08:26:53', '2019-12-10 08:31:52', NULL),
+(36, 0, 'V0YiYwix', 2, 7, NULL, 'When did you buy your new phone?', NULL, NULL, 'The store is close to my house.', 'Last week when it was on sale.', 'I think it\'s the same number.', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(37, 0, 'JzKAPIgi', 2, 8, NULL, 'Do you know where Keiko’s office is?', NULL, NULL, 'That\'s the official logo.', 'To reserve a room.', 'It’s on the second floor.', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(38, 0, 'ppTDIJdJ', 2, 9, NULL, 'That was a short movie, wasn’t it?', NULL, NULL, 'The theater on Glenn Road.', 'You\'re right—it was only an hour!', 'I must have misplaced it.', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(39, 0, 'ORiZfp99', 2, 10, NULL, 'Where can I find a building directory?', NULL, NULL, 'In two weeks.', 'No, thank you.', 'Near the front entrance.', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(40, 0, 'naj7JGya', 2, 11, NULL, 'Who\'s going to lead the merger negotiations?', NULL, NULL, 'John Sanchez is.', 'Thanks, I appreciate it.', 'No, that’s not mine.', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(41, 0, 'OpWFt15E', 2, 12, NULL, 'How do I contact the financial consultant?', NULL, NULL, 'A free consultation.', 'He left his business card.', 'In a few more days.', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(42, 0, 'G75bYtVf', 2, 13, NULL, 'When is the health inspector coming?', NULL, NULL, 'Anytime this week.', 'It’s good for your health.', 'At the back door.', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(43, 0, 'vKN2woy4', 2, 14, NULL, 'Whose turn is it to buy coffee?', NULL, NULL, 'It’s taking longer than we thought.', 'Sign at the bottom of the page.', 'No, you don’t need permission.', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(44, 0, 'Sc2IjCcj', 2, 15, NULL, 'Whose turn is it to buy coffee?', NULL, NULL, 'Two sugars please.', 'In the kitchen.', 'I already bought it.', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(45, 0, 'JfTASXBb', 2, 16, NULL, 'Where will the company retreat be next year?', NULL, NULL, 'Every year.', 'It hasn’t been decided yet.', 'Where will the company retreat be next year?', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(46, 0, 'PTXXpiuQ', 2, 17, NULL, 'Let\'s discuss the building designs this morning.', NULL, NULL, 'We can do it this afternoon instead.', 'The sign on the wall.', 'Does he work in that building, too?', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(47, 0, 'C5GMWxWn', 2, 18, NULL, 'Why is there a cake sitting out on the front desk?', NULL, NULL, 'The potted plant on the ground.', 'I\'ll answer the phone.', 'Because Barb\'s party is today.', NULL, 'A', NULL, NULL, '2019-12-10 08:44:45', '2019-12-10 08:44:45', NULL),
+(48, 0, 'MV9yeogd', 3, 32, NULL, 'Why is the woman calling?', NULL, NULL, 'To make an appointment.', 'To rent a car.', 'To ask about a fee.', 'To apply for a position.', 'A', NULL, NULL, '2019-12-10 08:49:24', '2019-12-10 08:49:24', NULL),
+(49, 0, 'KBaxJqhx', 3, 33, NULL, 'According to the man, what has recently changed?', NULL, NULL, 'Office hours.', 'Job requirements.', 'A Computer system', 'A company policy.', 'A', NULL, NULL, '2019-12-10 08:50:00', '2019-12-10 08:50:00', NULL),
+(50, 0, 'u3A3HYfw', 3, 33, NULL, 'According to the man, what has recently changed?', NULL, NULL, 'Office hours.', 'Job requirements.', 'A Computer system', 'A company policy.', 'A', NULL, NULL, '2019-12-10 08:50:26', '2019-12-10 08:50:26', NULL),
+(51, 0, 'kqXD32gy', 3, 34, NULL, 'What does the man agree to do?', NULL, NULL, 'Waive a fee.', 'Reschedule a meeting.', 'Sign a contract.', 'Repair a vehicle.', 'A', NULL, NULL, '2019-12-10 08:50:26', '2019-12-10 08:50:26', NULL),
+(52, 0, 'MGToCx38', 3, 33, NULL, 'According to the man, what has recently changed?', NULL, NULL, 'Office hours.', 'Job requirements.', 'A Computer system', 'A company policy.', 'A', NULL, NULL, '2019-12-10 08:53:01', '2019-12-10 08:53:01', NULL),
+(53, 0, 'gJwky7ls', 3, 34, NULL, 'What does the man agree to do?', NULL, NULL, 'Waive a fee.', 'Reschedule a meeting.', 'Sign a contract.', 'Repair a vehicle.', 'A', NULL, NULL, '2019-12-10 08:53:01', '2019-12-10 08:53:01', NULL),
+(54, 0, 'gVOtTb3w', 3, 35, NULL, 'What is the topic of the conversation?', NULL, NULL, 'Health', 'Traffic', 'Sports', 'Finance', 'A', NULL, NULL, '2019-12-10 08:53:01', '2019-12-10 08:53:01', NULL),
+(55, 0, 'nJQtVFnX', 3, 36, NULL, 'What caused a problem?', NULL, NULL, 'A staffing change', 'A rainstorm', 'A typographical error', 'A road closure', 'A', NULL, NULL, '2019-12-10 08:53:01', '2019-12-10 08:53:01', NULL),
+(56, 0, 'TmwHp5Tu', 3, 37, NULL, 'What will the listeners hear next', NULL, NULL, 'A commercial', 'A song', 'A weather report', 'A reading from a book', 'A', NULL, NULL, '2019-12-10 08:53:01', '2019-12-10 08:53:01', NULL),
+(57, 0, 'UX9uSDi5', 3, 38, NULL, 'What does the woman notify the man about?', NULL, NULL, 'She is unable to meet a deadline', 'She needs a replacement laptop', 'She cannot attend a business trip', 'She is planning to give a speech', 'A', NULL, NULL, '2019-12-10 08:53:01', '2019-12-10 08:53:01', NULL),
+(58, 0, 'VtmxFgqA', 3, 39, NULL, 'According to the woman, what recently happened in her department?', NULL, NULL, 'A corporate policy was updated', 'A supply order was mishandled', 'Client contracts were renewed', 'New employees were hired', 'A', NULL, NULL, '2019-12-10 08:53:01', '2019-12-10 08:53:01', NULL),
+(59, 0, '1Jev4MF9', 3, 40, NULL, 'What does the man say he will do next?', NULL, NULL, 'Speak with a colleague', 'Conduct an interview', 'Calculate a budget', 'Draft a travel itinerary', 'A', NULL, NULL, '2019-12-10 08:53:01', '2019-12-10 08:53:01', NULL),
+(60, 0, 'OUjydggS', 4, 71, NULL, 'What type of business is being advertised?', NULL, NULL, 'A farmers market.', 'A fitness center.', 'A medical clinic', 'A sporting goods store.', 'A', NULL, NULL, '2019-12-10 08:55:16', '2019-12-10 08:55:16', NULL),
+(61, 0, 'jMMBMYaC', 4, 72, NULL, 'What will the listeners be able to do starting in April?', NULL, NULL, 'Use multiple locations.', 'Try free samples', 'Meet with a nutritionist', 'Enter a contest', 'A', NULL, NULL, '2019-12-10 08:55:16', '2019-12-10 08:55:16', NULL),
+(62, 0, 'x2Iqh1Q3', 4, 73, NULL, 'Why does the speaker invite the listeners to visit a Web site?', NULL, NULL, 'To write a review.', 'To register for a class.', 'To check a policy.', 'To look at a map.', 'A', NULL, NULL, '2019-12-10 08:55:16', '2019-12-10 08:55:16', NULL),
+(63, 0, 'D8i9csIU', 4, 71, NULL, 'What type of business is being advertised?', NULL, NULL, 'A farmers market.', 'A fitness center.', 'A medical clinic', 'A sporting goods store.', 'A', NULL, NULL, '2019-12-10 08:58:33', '2019-12-10 08:58:33', NULL),
+(64, 0, 'iJqq6wr1', 4, 72, NULL, 'What will the listeners be able to do starting in April?', NULL, NULL, 'Use multiple locations.', 'Try free samples', 'Meet with a nutritionist', 'Enter a contest', 'A', NULL, NULL, '2019-12-10 08:58:33', '2019-12-10 08:58:33', NULL),
+(65, 0, 'xZeOjhFA', 4, 73, NULL, 'Why does the speaker invite the listeners to visit a Web site?', NULL, NULL, 'To write a review.', 'To register for a class.', 'To check a policy.', 'To look at a map.', 'A', NULL, NULL, '2019-12-10 08:58:33', '2019-12-10 08:58:33', NULL),
+(66, 0, 'bMkzV1xf', 4, 74, NULL, 'Why does the speaker thank the listeners?', NULL, NULL, 'For submitting design ideas.', 'For training new employees.', 'For working overtime.', 'For earning a certification.', 'A', NULL, NULL, '2019-12-10 08:58:33', '2019-12-10 08:58:33', NULL),
+(68, 0, 'k8A9g1l3', 4, 75, NULL, 'According to the speaker, what is scheduled for next month?', NULL, NULL, 'A retirement celebration', 'A trade show', 'A factory tour', 'A store opening', 'A', NULL, NULL, '2019-12-10 08:58:33', '2019-12-10 08:58:33', NULL),
+(69, 0, 'N69jCazQ', 4, 76, NULL, 'What does the speaker imply when she says, \"it\'s a large space\"?', NULL, NULL, 'There is room to display new merchandise.', 'High attendance is anticipated.', 'Avenue is too expensive.', 'There is not enough staff for an event.', 'A', NULL, NULL, '2019-12-10 08:58:33', '2019-12-10 08:58:33', NULL),
+(70, 0, 'ASaaClqU', 4, 77, NULL, 'According to the speaker, what is special about the restaurant?', NULL, NULL, 'It has private outdoor seating.', 'It has been recently renovated.', 'It has a vegetable garden.', 'It has weekly cooking classes.', 'A', NULL, NULL, '2019-12-10 08:58:33', '2019-12-10 08:58:33', NULL),
+(71, 0, 'eysXLAxb', 4, 78, NULL, 'Who is Natasha?', NULL, NULL, 'A business owner.', 'An interior decorator.', 'An event organizer.', 'A food writer.', 'A', NULL, NULL, '2019-12-10 08:58:33', '2019-12-10 08:58:33', NULL),
+(72, 0, 'FQeoHPae', 4, 79, NULL, 'Why does the speaker say, \"I eat it all the time\"?', NULL, NULL, 'He wants to eat something different.', 'He is recommending a dish.', 'He knows the ingredients.', 'He understands a dish is popular.', 'A', NULL, NULL, '2019-12-10 08:58:33', '2019-12-10 08:58:33', NULL),
+(74, 0, 'RrNLD1UT', 4, 80, NULL, 'Where is the announcement being made?', NULL, NULL, 'On a bus.', 'On a ferry boat.', 'On a train.', 'On an airplane.', 'A', NULL, NULL, '2019-12-10 08:58:33', '2019-12-10 08:58:33', NULL),
+(75, 0, 'Y8EAihIH', 5, 101, NULL, 'Ms. Durkin asked for volunteers to help _____ with the employee fitness program.', NULL, NULL, 'she', 'her', 'hers', 'herself', 'B', NULL, NULL, '2019-12-10 09:33:14', '2019-12-10 09:33:14', NULL),
+(76, 0, 'N7Ekp0ua', 6, NULL, '<p>&lt;p class=\"reading-text-paragraph\" style=\"\"&gt;&lt;span class=\"paragraph-sentence\"&gt;With Global Strength Gym\'s 30-day trial period, you get the opportunity to try out our classes, equipment, and facilities. _____(131). It\'s completely risk-free! To sign up, we require your contact information and payment details, but you will only be charged if you are a member for _____(132) 30 days. If you decide within this time that you no longer want to be a member of Global Strength, _____(133) visit our Web site at www.gsgym.com. On the Membership page, elect to _____(134) your membership and enter the necessary information. It\'s that easy!&lt;/span&gt;&lt;/p&gt;</p>', 'Questions 131-134 refer to the following advertisement', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-10 09:39:51', '2019-12-10 09:40:10', NULL),
+(77, 76, '61CHrcqo', 6, 131, NULL, '(131)', NULL, NULL, 'Throughout the trial, you pay nothing and sign no contract.', 'Weight-lifting classes are not currently available.', 'A cash deposit is required when you sign up for membership.', 'All questions should be e-mailed to customerservice@gsgym.com.', 'B', NULL, NULL, '2019-12-10 09:39:51', '2019-12-10 09:39:51', NULL),
+(78, 76, 'Rrf5kTaK', 6, 132, NULL, '(132)', NULL, NULL, 'not even', 'almost', 'over', 'less than', 'B', NULL, NULL, '2019-12-10 09:39:51', '2019-12-10 09:39:51', NULL),
+(79, 76, 'JA7hDod2', 6, 133, NULL, '(133)', NULL, NULL, 'justly', 'regularly', 'evenly', 'simply', 'B', NULL, NULL, '2019-12-10 09:39:51', '2019-12-10 09:39:51', NULL),
+(80, 76, 'ctScf7M1', 6, 134, NULL, '(134)', NULL, NULL, 'extend', 'renew', 'cancel', 'initiate', 'B', NULL, NULL, '2019-12-10 09:39:51', '2019-12-10 09:39:51', NULL),
+(81, 0, 'Bh8wXKu8', 7, NULL, '<p><span style=\"color: rgb(115, 135, 156);\">&lt;span class=\"paragraph-sentence\"&gt;Hi, Ziva. &lt;span class=\"q147-1\"&gt;I just met with the Han board of directors, and they\'re interested in our redesign proposal for their downtown office buildings&lt;/span&gt;. Amy Han asked for another work sample, but I didn\'t have the right portfolio with me. &lt;span class=\"q148-1\"&gt;I\'m heading to another meeting, so please have a messenger deliver a copy of the Grainger Centre files to her&lt;/span&gt;. Include the full set of plans. Thanks!&lt;/span&gt;</span></p>', 'Questions 147-148 refer to the following text message', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-10 09:43:24', '2019-12-10 09:43:24', NULL),
+(82, 81, 'hJqH9Nps', 7, 147, NULL, 'Where does Ms. Brown most likely work?', NULL, NULL, 'At an accounting firm', 'At an architectural firm', 'At a Web design company', 'At a market research company', 'B', NULL, NULL, '2019-12-10 09:43:24', '2019-12-10 09:43:24', NULL),
+(83, 81, 'DLBXlWkI', 7, 148, NULL, 'What is Ziva asked to do?', NULL, NULL, 'Reply to a text message', 'Create a portfolio', 'Set up a meeting', 'Send a work sample', 'A', NULL, NULL, '2019-12-10 09:43:24', '2019-12-10 09:43:24', NULL);
 
 -- --------------------------------------------------------
 
@@ -883,7 +999,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `examinations`
 --
 ALTER TABLE `examinations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `examination_logs`
@@ -895,7 +1011,7 @@ ALTER TABLE `examination_logs`
 -- AUTO_INCREMENT for table `examination_questions`
 --
 ALTER TABLE `examination_questions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `examination_types`
@@ -919,7 +1035,7 @@ ALTER TABLE `lessons`
 -- AUTO_INCREMENT for table `login_histories`
 --
 ALTER TABLE `login_histories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -937,7 +1053,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `question_logs`
