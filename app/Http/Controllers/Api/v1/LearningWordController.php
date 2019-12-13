@@ -128,4 +128,9 @@ class LearningWordController extends Controller
         }
         return $exam;
     }
+
+    public function random()
+    {
+        return $this->response(LearningWord::all()->random(30));
+    }
 }

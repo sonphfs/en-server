@@ -48,11 +48,14 @@ class ExaminationController extends Controller
         $responseData = [];
         $readingCorrectNum = 0;
         $listeningCorrectNum = 0;
+        $readingScore = 0;
+        $listeningScore = 0;
         $listeningQuestionIds = [];
+        $readingQuestionIds = [];
+
         foreach ($requestData['listening_questions'] as $question) {
             $listeningQuestionIds[] = $question['question_id'];
         }
-        $readingQuestionIds = [];
         foreach ($requestData['reading_questions'] as $question) {
             $readingQuestionIds[] = $question['question_id'];
         }

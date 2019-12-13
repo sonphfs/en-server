@@ -37,7 +37,7 @@ class UploadFileController extends Controller
                 default:
                     break;
             }
-            $result = $file->move($destinationPath, $file->getFileName() . '.' . $file->getClientOriginalExtension());
+            $result = $this->_moveFile($destinationPath, $file);
             $filePath = $result->getPathName();
             return $this->response(['typeFile' => self::FILE_IMAGE, 'filePath' => $filePath]);
         }
@@ -57,7 +57,7 @@ class UploadFileController extends Controller
                 default:
                     break;
             }
-            $result = $file->move($destinationPath, $file->getFileName() . '.' . $file->getClientOriginalExtension());
+            $result = $this->_moveFile($destinationPath, $file);
             $filePath = $result->getPathName();
             return $this->response(['typeFile' => self::FILE_AUDIO, 'filePath' => $filePath]);
         }
@@ -70,5 +70,10 @@ class UploadFileController extends Controller
         if (File::exists($filePath)) {
             unlink($filePath);
         }
+    }
+
+    private function _moveFile($destinationPath, $file)
+    {
+        return $file->move($destinationPath, $this->_generateRandomString(15). '.' . $file->getClientOriginalExtension());
     }
 }

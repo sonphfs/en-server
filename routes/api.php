@@ -45,6 +45,8 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
             Route::get('examination/toeic-exam-histories', 'ExaminationController@getToeicExamHistories');
             Route::get('exam-log/{id}', 'ExaminationController@getExaminationHistory');
 
+            Route::get('learning-word/random', 'LearningWordController@random');
+
             Route::prefix('backend')->middleware(['isAdmin'])->namespace('Admin')->group(function() {
                 Route::prefix('/users')->group(function(){
                     Route::get('/list', 'UserController@getUsers');
@@ -64,6 +66,11 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::get('/questions/{code}/{part}', 'ExaminationController@getQuestionByPart');
                     Route::post('/update-part', 'ExaminationController@updatePart');
 
+                });
+                Route::prefix('score')->group(function(){
+                    Route::get('/score-table', 'ScoreController@getScoreTable');
+                    Route::post('/import', 'ScoreController@importCsv');
+                    Route::get('/export', 'ScoreController@exportCsv');
                 });
                 Route::prefix('lessons')->group(function(){
                     Route::get('/list', 'LessonController@getLessons');
