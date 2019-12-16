@@ -27,4 +27,10 @@ class ExaminationLogController extends Controller
             ->get();
         return $this->response(['exam_result' => $examLogDetail, 'exam_histories' => $historiesExamlog]);
     }
+
+    public function getScore($id)
+    {
+        $examinationLog = ExaminationLog::find($id);
+        return $this->response($examinationLog);
+    }
 }

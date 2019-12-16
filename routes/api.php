@@ -45,6 +45,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
             Route::get('examination/toeic-exam-histories', 'ExaminationController@getToeicExamHistories');
             Route::get('exam-log/{id}', 'ExaminationController@getExaminationHistory');
             Route::get('test-log/{id}', 'ExaminationLogController@getTestResult');
+            Route::get('exam/get-total-score/{id}', 'ExaminationLogController@getScore');
 
             Route::get('learning-word/random', 'LearningWordController@random');
 
