@@ -72,4 +72,31 @@ class ExaminationLogHelper
         ];
         return $examinationResult;
     }
+
+    public static function getDetailTestResult($examinatinLogId)
+    {
+        $examinationLog = ExaminationLog::find($examinatinLogId)->load('questions', 'examination');
+        $questionLogs = $examinationLog->questions;
+        $examinationInfo = $examinationLog->examination;
+        $correctAnswerCount = 0;
+        $notSelected = 0;
+        foreach ($questionLogs as $question) {
+            $choosen_answer = $question->pivot->choosen_answer;
+            if ($choosen_answer == null) {
+                $notSelected++;
+            }
+            if ($question->correct_answer == $choosen_answer) {
+                $correctAnswerCount++;
+            }
+        }
+        $totalQuestion = count($questionLogs);
+        $examinationResult = [
+            'correct_answer_count' => $correctAnswerCount,
+            'not_selected' => $notSelected,
+            'total_question' => $totalQuestion,
+            'total_incorrect' => $totalQuestion - $correctAnswerCount,
+            'examination' => $examinationInfo
+        ];
+        return $examinationResult;
+    }
 }

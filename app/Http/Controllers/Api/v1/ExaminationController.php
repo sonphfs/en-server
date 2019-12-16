@@ -80,7 +80,7 @@ class ExaminationController extends Controller
         $exam->user_id = $user->id;
         $exam->examination_id = $exammination->id;
         if($exammination->type == self::SHORT_TEST) {
-            $exam->total_score = round(($listeningCorrectNum + $readingCorrectNum) / self::SHORT_TEST_QUESTION_NUM, 2);
+            $exam->total_score = round(($listeningCorrectNum + $readingCorrectNum) / self::SHORT_TEST_QUESTION_NUM, 2) * 100;
         }else {
             $exam->total_score = $readingScore+ $listeningScore;
         }
@@ -95,9 +95,11 @@ class ExaminationController extends Controller
             $questionLog->save();
             $responseData['question_logs'][] = $questionLog;
         }
-//        $examLog = ExaminationLog::where('id', $exam->id)->first()->load('examination','examination.examination_type');
-        $examLog = ExaminationLogHelper::getDetailExaminationResult($exam->id);
-        Mail::to($user)->send(new ExaminationResult($examLog));
+        if($exammination->type != self::SHORT_TEST) {
+            //$examLog = ExaminationLog::where('id', $exam->id)->first()->load('examination','examination.examination_type');
+            $examLog = ExaminationLogHelper::getDetailExaminationResult($exam->id);
+            Mail::to($user)->send(new ExaminationResult($examLog));
+        }
         return $this->response(['Logs' => $responseData, 'examination_log_id' => $exam->id]);
     }
 
