@@ -123,4 +123,8 @@ class ExaminationController extends Controller
         return $this->response(['examHistories'=> $toeicExaminationHistories, 'totalPage' => $totalPage]);
     }
 
+    public function submitTest(Request $request)
+    {
+        return $this->response($request->questions);
+    }
 }

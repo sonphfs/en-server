@@ -42,6 +42,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
 
             //examination
             Route::post('submit-examination', 'ExaminationController@submitExam');
+            Route::post('submit-test', 'ExaminationController@submitTest');
             Route::get('examination/toeic-exam-histories', 'ExaminationController@getToeicExamHistories');
             Route::get('exam-log/{id}', 'ExaminationController@getExaminationHistory');
             Route::get('test-log/{id}', 'ExaminationLogController@getTestResult');
