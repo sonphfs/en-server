@@ -13,4 +13,8 @@ class LoginHistory extends Model
         'ip_address',
         'device'
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

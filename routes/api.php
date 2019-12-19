@@ -31,6 +31,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         //subject
         Route::get('/subjects', 'SubjectController@getSubjects');
         Route::get('/list-word/{id}', 'LearningWordController@getLearingWords');
+        Route::get('/login-histories', 'Admin\LoginHistoryController@getlist');
         Route::group(['middleware' => 'jwt.auth'], function () {
 
             //user
@@ -57,6 +58,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::get('/show/{id}', 'UserController@show');
                     Route::post('/update/{id}', 'UserController@update');
                     Route::post('/delete', 'UserController@delete');
+                    Route::get('/login-histories', 'LoginHistoryController@getlist');
                 });
                 Route::prefix('examinations')->group(function(){
                     Route::get('/list', 'ExaminationController@getExaminations');
@@ -113,6 +115,12 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                     Route::get('/show/{id}', 'QuestionController@show');
                     Route::post('/update/{id}', 'QuestionController@update');
                     Route::post('/delete', 'QuestionController@delete');
+                });
+
+                Route::prefix('/contacts/')->group(function(){
+                    Route::get('/list', 'ContactController@getList');
+                    Route::post('/update/{id}', 'ContactController@update');
+                    Route::post('/delete', 'ContactController@delete');
                 });
                 Route::post('/files/upload', 'UploadFileController@uploadImage');
                 Route::post('/files/delete', 'UploadFileController@deleteFile');

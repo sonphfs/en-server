@@ -21,7 +21,7 @@ class ContactController extends Controller
         $contact->body = $requestData['body'];
         $contact->subject = $requestData['subject'];
         $contact->email = $requestData['email'];
-        $contact->flag = 1;
+        $contact->flag = 0;
         $contact->save();
         return $this->response([$contact]);
     }

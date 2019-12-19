@@ -15,7 +15,6 @@ class UserController extends Controller
         $keyword = request()->keyword;
         if(!empty($keyword)) {
             $users = User::where('username', 'LIKE', "%{$keyword}%")
-                ->orWhere('username', 'LIKE', "%{$keyword}%")
                 ->orWhere('email', 'LIKE', "%{$keyword}%")
                 ->orWhere('phone', 'LIKE', "%{$keyword}%")
                 ->orWhere('address', 'LIKE', "%{$keyword}%")
