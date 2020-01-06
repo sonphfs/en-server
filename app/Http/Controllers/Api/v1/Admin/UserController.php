@@ -74,17 +74,18 @@ class UserController extends Controller
             $user->username = $requestData['username'];
             $user->password = bcrypt('123123');
             $user->phone = $requestData['phone'];
+            $user->avatar = self::USER_DEFAULT_AVATAR;
             $user->address = $requestData['address'];
             $user->email = $requestData['email'];
             $user->birthday = $requestData['birthday'];
-            $user->gender = $requestData['gender'];
-            $result = $user->save();
+            $user->save();
+
             $roleUser = new RoleUser();
             $roleUser->user_id = $user->id;
             $roleUser->role_id = 3;
             $roleUser->save();
+
         }catch (\Exception $e) {
-            return $this->response($e, 422);
         }
         return $this->response($user);
     }

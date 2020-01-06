@@ -21,6 +21,7 @@ class Controller extends BaseController
 
     const USER_AVATARS_FOLDER = 'enc/uploads/users/avatars/';
     const USER_UPLOAD_IMAGES_FOLDER = 'enc/uploads/users/images/';
+    const USER_DEFAULT_AVATAR = 'enc/uploads/users/avatars/default-userAvatar.png';
 
     const FILE_AUDIO = 'AUDIO';
     const FILE_IMAGE = 'IMAGE';
