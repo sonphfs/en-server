@@ -125,6 +125,47 @@ class ExaminationController extends Controller
 
     public function submitTest(Request $request)
     {
-        return $this->response($request->questions);
+        $questions = $request->questions;
+        $examLog = $this->_saveExam($request->examId, $request->questions);
+        return $this->response($examLog);
+    }
+
+    private function _saveExam($examId, $questions)
+    {
+        $exam = Examination::find($examId)->load('questions');
+        $correctAnswer = 0;
+        foreach ($questions as $question) {
+            foreach ($exam->questions as $item) {
+                if ($question['question_id'] == $item->id && $question['choose'] == $item->correct_answer) {
+                    $correctAnswer++;
+                }
+            }
+        }
+        $totalScore = round($correctAnswer / count($exam->questions), 2) * 100;
+        $examLog = $this->_saveExaminationLog($examId, $totalScore);
+        if(!empty($examLog->id)) {
+            foreach ($questions as $question) {
+                $this->_saveQuestionLog($question, $examLog->id);
+            }
+        }
+        return $examLog;
+    }
+
+    private function _saveExaminationLog($examId, $totalScore)
+    {
+        $examLog = new ExaminationLog();
+        $examLog->user_id = Auth::user()->id;
+        $examLog->examination_id = $examId;
+        $examLog->total_score = $totalScore;
+        $examLog->save();
+        return $examLog;
+    }
+
+    private function _saveQuestionLog($question, $examLogId) {
+        $questionLog = new QuestionLog();
+        $questionLog->examination_log_id = $examLogId;
+        $questionLog->question_id = $question['question_id'];
+        $questionLog->choosen_answer = $question['choose'];
+        $questionLog->save();
     }
 }

@@ -95,8 +95,8 @@ class LearningWordController extends Controller
     {
         try{
             $wordId = LearningWord::where('subject_id', 1)->get('id');
-            $questions = Question::whereIn('word_id', $wordId)->distinct('word_id')->limit(10)->get();
-            $exam = $this->_createExamination($questions);
+            $questions = Question::whereIn('word_id', $wordId)->distinct('word_id')->limit(2)->get();
+            $exam = $this->_createExamination($questions, $subjectId);
             return $this->response($exam->load('questions'));
         }catch (\Exception $e){
 
@@ -110,7 +110,7 @@ class LearningWordController extends Controller
     }
 
 
-    private function _createExamination($questions)
+    private function _createExamination($questions, $subject_id)
     {
         $exam = new Examination();
         $exam->user_id = Auth::user()->id;
@@ -118,6 +118,7 @@ class LearningWordController extends Controller
         $exam->title = 'TEST VOCABUNARY';
         $exam->type = 5;
         $exam->description = 'TEST VOCABUNARY';
+        $exam->subject_id = $subject_id;
         $exam->status = 1;
         $exam->save();
         foreach ($questions as $question) {
