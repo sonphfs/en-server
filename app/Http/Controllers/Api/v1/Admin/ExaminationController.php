@@ -23,13 +23,14 @@ class ExaminationController extends Controller
         $keyword = request()->keyword;
         if(!empty($keyword)) {
             $exams = Examination::with('examination_type')
-                ->where('code', 'LIKE', "%{$keyword}%")
+                ->where('type',  '<=',self::MAX_TYPE_TOEIC)
+                ->orWhere('code', 'LIKE', "%{$keyword}%")
                 ->orWhere('title', 'LIKE', "%{$keyword}%")
                 ->orWhere('description', 'LIKE', "%{$keyword}%")
                 ->paginate(self::PER_PAGE);
                 return $this->response($exams);
         }
-        return $this->response(Examination::with('examination_type')->paginate(self::PER_PAGE));
+        return $this->response(Examination::with('examination_type')->where('type', '<=', self::MAX_TYPE_TOEIC)->paginate(self::PER_PAGE));
     }
 
     public function createOrUpdate(Request $request)

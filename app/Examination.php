@@ -40,4 +40,13 @@ class Examination extends Model
         return $this->hasOne(ExaminationType::class, 'id', 'type');
     }
 
+    public function subject()
+    {
+        return $this->hasOne(Subject::class, 'id', 'subject_id');
+    }
+
+    public function lesson()
+    {
+        return $this->hasOne(Subject::class, 'id', 'subject_id');
+    }
 }

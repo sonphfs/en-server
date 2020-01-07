@@ -9,5 +9,9 @@ use App\Http\Controllers\Controller;
 
 class ExaminationLogController extends Controller
 {
-
+    public function histories()
+    {
+        $histories = ExaminationLog::with('user', 'examination', 'examination.examination_type', 'examination.subject')->paginate(self::PER_PAGE);
+        return $this->response($histories);
+    }
 }

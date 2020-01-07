@@ -18,6 +18,7 @@ class Controller extends BaseController
     const SHORT_TEST = 1;
     const FULL_TEST = 2;
     const FULL_TEST_NEW_FORMAT = 3;
+    const MAX_TYPE_TOEIC = 3;
 
     const USER_AVATARS_FOLDER = 'enc/uploads/users/avatars/';
     const USER_UPLOAD_IMAGES_FOLDER = 'enc/uploads/users/images/';

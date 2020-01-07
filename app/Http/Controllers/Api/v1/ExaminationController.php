@@ -18,6 +18,11 @@ use Illuminate\Support\Facades\Mail;
 
 class ExaminationController extends Controller
 {
+    public function random()
+    {
+        $perpage = 6;
+        return $this->response(Examination::where('status', 1)->where('type', '<=' , 3)->paginate($perpage));
+    }
     public function getExam($code)
     {
         $exam = Examination::where('code', $code)->first()->load('questions');

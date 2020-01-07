@@ -95,12 +95,11 @@
                                             </span></span>
                                             </span>
                                 </p>
-
                             </td>
                         </tr>
                         <tr style="text-align:center">
                             <td>
-                                <p><a href="http://localhost:8080/" style="width:150px;height:45px;display:inline-block;background:#7ac60c;text-align:center;line-height:45px;color:#fff;text-decoration:none;border-radius:23px;font-weight:600" target="_blank" data-saferedirecturl="">Xem chi tiết</a>
+                            <p><a href="{{env('CLIENT_URL')}}" style="width:150px;height:45px;display:inline-block;background:#7ac60c;text-align:center;line-height:45px;color:#fff;text-decoration:none;border-radius:23px;font-weight:600" target="_blank" data-saferedirecturl="">Làm bài thi khác</a>
                                 </p>
                             </td>
                         </tr>

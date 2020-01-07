@@ -6,6 +6,7 @@ use App\Helpers\UserHelper as User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -44,10 +45,11 @@ class UserController extends Controller
         $request->validate([
             'current_password' => 'required|min:3|max:20',
             'password' => 'required|min:3|max:20',
-            'password_confirmation' => 'required|min:3|max:20',
+            'password_confirmation' => 'required|same:password|min:3|max:20',
         ]);
-        if ($request->password != $request->password_confirmation) {
-            return $this->response(false, 402, 'Password incorrect');
+        $res = $request->current_password;
+        if(!Hash::check($res, $currentPassword)) {
+            return response()->json(['errors' => ['current_password' => ['Incorrect password!']]], 422);
         }
         $user = Auth::user();
         $user->password = bcrypt($request->password);

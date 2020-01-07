@@ -21,6 +21,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         Route::get('mail', function (){
             return view('mails.toeic_result');
         });
+        Route::get('/random-exams', 'ExaminationController@random');
         Route::get('get-exam/{code}', 'ExaminationController@getExam');
         Route::get('get-list-exam', 'ExaminationController@getList');
         Route::post('send-contact', 'ContactController@send');
@@ -32,6 +33,9 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
         Route::get('/subjects', 'SubjectController@getSubjects');
         Route::get('/list-word/{id}', 'LearningWordController@getLearingWords');
         Route::get('/login-histories', 'Admin\LoginHistoryController@getlist');
+
+        // lesson
+        Route::get('/lessons', 'LessonController@getLessons');
         Route::group(['middleware' => 'jwt.auth'], function () {
 
             //user
@@ -62,6 +66,7 @@ Route::prefix('v1')->middleware(['cors'])->group(function() {
                 });
                 Route::prefix('examinations')->group(function(){
                     Route::get('/list', 'ExaminationController@getExaminations');
+                    Route::get('/histories', 'ExaminationLogController@histories');
                     Route::post('/create-or-update', 'ExaminationController@createOrUpdate');
                     Route::get('/show/{code}', 'ExaminationController@show');
                     Route::post('/update/{code}', 'ExaminationController@update');

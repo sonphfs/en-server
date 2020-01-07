@@ -17,4 +17,9 @@ class ExaminationLog extends Model
     {
         return $this->belongsTo(Examination::class, 'examination_id');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
