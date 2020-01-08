@@ -27,7 +27,7 @@ class Examination extends Model
 
     public function questions()
     {
-        return $this->belongsToMany(Question::class, 'examination_questions');
+        return $this->belongsToMany(Question::class, 'examination_questions')->orderBy('no');
     }
 
     public function examination_logs()

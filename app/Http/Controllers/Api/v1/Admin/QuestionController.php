@@ -64,4 +64,16 @@ class QuestionController extends Controller
         $questionObject->audio = $question['audio'];
         $questionObject->save();
     }
+
+    public function delete(Request $request)
+    {
+        try {
+            $id = $request->all()['id'];
+            $question = Question::find($id);
+            $question->delete();
+            if($question->deleted_at != null)
+                return $this->response($question);
+        }catch (\Exception $e) {
+        }
+    }
 }
