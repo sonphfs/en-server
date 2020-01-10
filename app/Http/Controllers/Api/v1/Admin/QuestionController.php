@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\v1\Admin;
 use App\Question;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class QuestionController extends Controller
 {
@@ -70,10 +71,13 @@ class QuestionController extends Controller
         try {
             $id = $request->all()['id'];
             $question = Question::find($id);
+            $subQuestionIds = Question::where('parent_id', $id)->get()->pluck('id')->toArray();
+            if(count($subQuestionIds)) {
+                $result = Question::whereIn('id', $subQuestionIds)->delete();
+            }
             $question->delete();
             if($question->deleted_at != null)
                 return $this->response($question);
-        }catch (\Exception $e) {
-        }
+        }catch (\Exception $e) {}
     }
 }
