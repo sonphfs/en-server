@@ -95,7 +95,7 @@ class LearningWordController extends Controller
     {
         try{
             $wordId = LearningWord::where('subject_id', 1)->get('id');
-            $questions = Question::whereIn('word_id', $wordId)->distinct('word_id')->limit(2)->get();
+            $questions = Question::whereIn('word_id', $wordId)->distinct('word_id')->limit(5)->get();
             $exam = $this->_createExamination($questions, $subjectId);
             return $this->response($exam->load('questions'));
         }catch (\Exception $e){

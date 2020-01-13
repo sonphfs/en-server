@@ -23,6 +23,8 @@ class Examination extends Model
         'description',
         'audio',
         'published',
+        'user_id',
+        'subject_id'
     ];
 
     public function questions()
