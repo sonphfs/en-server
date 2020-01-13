@@ -1,0 +1,492 @@
+[
+  {
+    "id" : 1,
+    "word": "abide by ",
+    "type": "v",
+    "meaning": "tuân theo",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 2,
+    "word": "attract",
+    "type": "v",
+    "meaning": "thu hút",
+    "pronunciation": "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 3,
+    "word": "characteristic",
+    "type": "n",
+    "meaning": "đặc điểm",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 4,
+    "word": "address",
+    "type": "n",
+    "meaning": "bài diễn văn",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 5,
+    "word": "accommodate",
+    "type": "v",
+    "meaning": "đáp ứng",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 6,
+    "word": "access",
+    "type": "v",
+    "meaning": "truy cập",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 7,
+    "word": "affordable",
+    "type": "adj",
+    "meaning": "chi trả được",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 8,
+    "word": "appreciation",
+    "type": "n",
+    "meaning": "sự cảm kích",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 9,
+    "word": "disk",
+    "type": "n",
+    "meaning": "đĩa",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 10,
+    "word": "assemble",
+    "type": "v",
+    "meaning": "tập hợp",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 11,
+    "word": "abundant",
+    "type": "adj",
+    "meaning": "rất nhiều",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 12,
+    "word": "ability",
+    "type": "n",
+    "meaning": "khả năng",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 13,
+    "word": "conduct",
+    "type": "v",
+    "meaning": "tiến hành",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 14,
+    "word": "basis",
+    "type": "n",
+    "meaning": "nền tảng",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 15,
+    "word": "achievement",
+    "type": "v",
+    "meaning": "thành tựu",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 16,
+    "word": "bargain",
+    "type": "v",
+    "meaning": "mặc cả",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 17,
+    "word": "diversify",
+    "type": "v",
+    "meaning": "đa dạng hóa",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 18,
+    "word": "accurately",
+    "type": "adv",
+    "meaning": "chính xác",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 19,
+    "word": "charge",
+    "type": "v",
+    "meaning": "tính phí",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 20,
+    "word": "adjustment",
+    "type": "n",
+    "meaning": "sự điều chỉnh",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 21,
+    "word": "accept",
+    "type": "v",
+    "meaning": "chấp nhận",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 22,
+    "word": "accounting",
+    "type": "n",
+    "meaning": "kế toán",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 23,
+    "word": "aggressively",
+    "type": "adv",
+    "meaning": "hùng hổ, hung hăng",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 24,
+    "word": "calculation",
+    "type": "n",
+    "meaning": "sự tính toán, đo lường",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 25,
+    "word": "desire",
+    "type": "v",
+    "meaning": "ước muốn",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 26,
+    "word": "adjacent",
+    "type": "adj",
+    "meaning": "kế bên",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 27,
+    "word": "adhere to",
+    "type": "v",
+    "meaning": "tuân thủ, tôn trọng",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 28,
+    "word": "brand",
+    "type": "n",
+    "meaning": "nhãn hiệu",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 29,
+    "word": "anxious",
+    "type": "adj",
+    "meaning": "lo lắng",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 30,
+    "word": "apprehensive",
+    "type": "adj",
+    "meaning": "lo ngại",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 31,
+    "word": "appeal",
+    "type": "n",
+    "meaning": "sức lôi cuốn",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 32,
+    "word": "perform",
+    "type": "v",
+    "meaning": "trình diễn",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 33,
+    "word": "burden",
+    "type": "n",
+    "meaning": "trách nhiệm",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 34,
+    "word": "accustom to",
+    "type": "v",
+    "meaning": "làm quen với",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 35,
+    "word": "assist",
+    "type": "v",
+    "meaning": "trợ giúp",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 36,
+    "word": "agent",
+    "type": "n",
+    "meaning": "đại lý",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 37,
+    "word": "deal with",
+    "type": "v",
+    "meaning": "xử trí",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 38,
+    "word": "comprehensive",
+    "type": "n",
+    "meaning": "toàn diện",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 39,
+    "word": "advanced",
+    "type": "adj",
+    "meaning": "tiên tiến",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 40,
+    "word": "busy",
+    "type": "adj",
+    "meaning": "bận rộn",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 41,
+    "word": "attainment",
+    "type": "n",
+    "meaning": "thành tựu",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 42,
+    "word": "action",
+    "type": "n",
+    "meaning": "diễn biến, hành động",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 43,
+    "word": "available",
+    "type": "adj",
+    "meaning": "có sẵn",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 44,
+    "word": "acquire",
+    "type": "v",
+    "meaning": "giành được",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 45,
+    "word": "assignment",
+    "type": "n",
+    "meaning": "việc được giao",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 46,
+    "word": "annually",
+    "type": "adv",
+    "meaning": "hàng năm",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 47,
+    "word": "allow",
+    "type": "v",
+    "meaning": "cho phép",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 48,
+    "word": "admit",
+    "type": "v",
+    "meaning": "nhận vào",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  },
+  {
+    "id": 49,
+    "word": "consult",
+    "type": "v",
+    "meaning": "tham khảo",
+    "pronunciation" : "",
+    "audio": "audio.mp3",
+    "image": "image.png",
+    "example": ""
+  }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "SHORT TEST",
+        "type": "TOEIC_TEST"
+    },
+    {
+        "name": "FULL TEST",
+        "type": "TOEIC_TEST"
+    },
+    {
+        "name": "FULL TEST(NEW FORMAT)",
+        "type": "TOEIC_TEST"
+    },
+    {
+        "name": "PRACTICE GRAMMAR",
+        "type": "PRACTICE_GRAMMAR"
+    },
+    {
+        "name": "PRACTICE VOCABULARY",
+        "type": "PRACTICE_VOCABULARY"
+    }
+]
